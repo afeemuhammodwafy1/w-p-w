@@ -208,46 +208,76 @@ h2:after {
     color: #bdd4ff;
 }
 
-/* ========== SKILLS SECTION ========== */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+/* ========== SKILLS SECTION - MODERN BADGE/STYLISH TAGS (NO PERCENTAGES) ========== */
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     margin-top: 1.5rem;
 }
 
-.skill-item {
-    background: rgba(10, 20, 35, 0.6);
+.skill-category {
+    background: rgba(10, 20, 35, 0.5);
     border-radius: 1.2rem;
-    padding: 0.5rem 0.8rem;
+    padding: 1.5rem;
     backdrop-filter: blur(4px);
+    border: 1px solid rgba(0, 255, 255, 0.15);
+    transition: all 0.3s ease;
 }
 
-.skill-name {
+.skill-category:hover {
+    border-color: rgba(0, 255, 255, 0.4);
+    background: rgba(10, 20, 35, 0.7);
+}
+
+.cat-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    color: #0ff;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
+    align-items: center;
+    gap: 10px;
+    border-left: 3px solid #0ff;
+    padding-left: 15px;
+}
+
+.cat-title i {
+    font-size: 1.4rem;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.skill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 255, 255, 0.08);
+    border: 1px solid rgba(0, 255, 255, 0.25);
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
     font-weight: 500;
+    color: #d1e5ff;
+    transition: all 0.25s ease;
+    cursor: default;
 }
 
-.progress-bar-bg {
-    background: #1e2a3a;
-    border-radius: 20px;
-    overflow: hidden;
-    height: 10px;
+.skill-badge i {
+    font-size: 0.95rem;
+    color: #0ff;
 }
 
-.progress-fill {
-    background: linear-gradient(90deg, #0ff, #2a6eff);
-    width: 0%;
-    height: 100%;
-    border-radius: 20px;
-    animation: fillProgress 1.2s ease-out forwards;
-}
-
-@keyframes fillProgress {
-    from { width: 0%; }
-    to { width: var(--target); }
+.skill-badge:hover {
+    background: rgba(0, 255, 255, 0.15);
+    border-color: #0ff;
+    transform: translateY(-2px);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.1);
 }
 
 /* ========== PROJECTS SECTION ========== */
@@ -495,9 +525,6 @@ footer {
         font-size: 1.2rem;
         min-height: 2.8rem;
     }
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
     .contact-btn {
         padding: 0.6rem 1.2rem;
         font-size: 0.8rem;
@@ -507,6 +534,13 @@ footer {
     }
     .project-card h3 {
         font-size: 1.3rem;
+    }
+    .cat-title {
+        font-size: 1.1rem;
+    }
+    .skill-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
     }
 }
 
@@ -523,5 +557,8 @@ footer {
     .project-link {
         padding: 0.6rem 1.5rem;
         font-size: 0.9rem;
+    }
+    .skill-category {
+        padding: 1rem;
     }
 }
