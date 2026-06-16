@@ -70,6 +70,7 @@ body {
     gap: 2rem;
     list-style: none;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .nav-links a {
@@ -80,6 +81,9 @@ body {
     font-size: 1rem;
     position: relative;
     cursor: pointer;
+    padding: 0.4rem 0;
+    display: inline-flex;
+    align-items: center;
 }
 
 .nav-links a:hover, .nav-links a.active {
@@ -92,13 +96,43 @@ body {
     position: absolute;
     width: 0%;
     height: 2px;
-    bottom: -6px;
+    bottom: -4px;
     left: 0;
     background: cyan;
     transition: 0.3s;
 }
 
 .nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Resume button - exactly same as other navigation items */
+#resumeBtn {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0.4rem 0 !important;
+}
+
+#resumeBtn:hover {
+    background: transparent;
+    transform: none;
+    box-shadow: none;
+    color: #0ff;
+}
+
+#resumeBtn::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: cyan;
+    transition: 0.3s;
+}
+
+#resumeBtn:hover::after {
     width: 100%;
 }
 
@@ -208,7 +242,7 @@ h2:after {
     color: #bdd4ff;
 }
 
-/* ========== SKILLS SECTION - MODERN BADGE/STYLISH TAGS (NO PERCENTAGES) ========== */
+/* ========== SKILLS SECTION - MODERN BADGE/STYLISH TAGS ========== */
 .skills-wrapper {
     display: flex;
     flex-direction: column;
@@ -305,10 +339,9 @@ h2:after {
 }
 
 .project-icon i {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #0ff;
     margin-bottom: 1rem;
-    text-shadow: 0 0 20px cyan;
 }
 
 .project-card h3 {
@@ -542,6 +575,9 @@ footer {
         font-size: 0.8rem;
         padding: 0.4rem 1rem;
     }
+    .project-icon i {
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -560,5 +596,8 @@ footer {
     }
     .skill-category {
         padding: 1rem;
+    }
+    .project-icon i {
+        font-size: 2rem;
     }
 }

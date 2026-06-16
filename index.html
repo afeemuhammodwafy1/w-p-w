@@ -13,7 +13,7 @@
 
 <nav class="navbar">
     <div class="nav-container">
-        <div class="logo">WAFY<span>.</span></div>
+        <div class="logo">AFEE<span>.</span></div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -21,6 +21,7 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#" id="resumeBtn">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
@@ -49,7 +50,7 @@
         </div>
     </section>
 
-    <!-- Skills Section - Modern Badge/Tag Layout (No Percentage Bars) -->
+    <!-- Skills Section - Modern Badge/Tag Layout -->
     <section id="skills">
         <h2>Technical Skills</h2>
         <p class="section-sub">Technologies & tools I work with</p>
@@ -150,8 +151,8 @@
             <div class="edu-card glass-card">
                 <i class="fas fa-university"></i>
                 <h3>Higher Secondary Certificate (HSC)</h3>
-                <p class="institution">College · Completed 2026</p>
-                <p class="edu-description">Successfully completed Higher Secondary Certificate in Science division with excellent academic record.</p>
+                <p class="institution">College · 2024 - Present</p>
+                <p class="edu-description">Currently pursuing A-Levels in Science group with focus on analytical thinking, mathematics, physics, and emerging technologies.</p>
             </div>
             <div class="edu-card glass-card">
                 <i class="fas fa-school"></i>
@@ -226,7 +227,7 @@
 </footer>
 
 <script>
-    // Typing Animation
+    // ========== TYPING ANIMATION ==========
     const roles = ["A-Level Student", "Cybersecurity Enthusiast", "Front-End Developer", "AI & Tech Explorer"];
     let roleIndex = 0, charIndex = 0, isDeleting = false;
     const typedSpan = document.getElementById("typing-animation");
@@ -257,8 +258,8 @@
     }
     typeEffect();
 
-    // Smooth Scroll
-    document.querySelectorAll('.nav-links a').forEach(anchor => {
+    // ========== SMOOTH SCROLL FOR NAVIGATION (excluding Resume button) ==========
+    document.querySelectorAll('.nav-links a:not(#resumeBtn)').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
@@ -271,7 +272,26 @@
         });
     });
 
-    // Active link on scroll
+    // ========== RESUME DOWNLOAD WITH AUTOMATIC RENAMING ==========
+    document.getElementById('resumeBtn').addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default anchor behavior
+        
+        // Create a temporary anchor element
+        const downloadLink = document.createElement('a');
+        
+        // Path to your resume file (must be named exactly 'cv.pdf' in the same folder)
+        downloadLink.href = 'cv.pdf';
+        
+        // This forces download AND renames the file to the desired name
+        downloadLink.download = 'Afee-Muhammod-Wafi\'s-Resume.pdf';
+        
+        // Trigger the download
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    });
+
+    // ========== ACTIVE LINK ON SCROLL ==========
     window.addEventListener('scroll', () => {
         let scrollPos = window.scrollY + 120;
         document.querySelectorAll('section').forEach(section => {
