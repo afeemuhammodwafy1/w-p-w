@@ -13,7 +13,7 @@
 
 <nav class="navbar">
     <div class="nav-container">
-        <div class="logo">WAFY<span></span></div>
+        <div class="logo">AFEE<span>.</span></div>
         
         <!-- Hamburger Menu Icon (visible on mobile) -->
         <div class="hamburger" id="hamburger">
@@ -300,18 +300,12 @@
 
     // ========== RESUME DOWNLOAD WITH AUTOMATIC RENAMING ==========
     document.getElementById('resumeBtn').addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent default anchor behavior
+        e.preventDefault();
         
-        // Create a temporary anchor element
         const downloadLink = document.createElement('a');
-        
-        // Path to your resume file (must be named exactly 'cv.pdf' in the same folder)
         downloadLink.href = 'cv.pdf';
-        
-        // This forces download AND renames the file to the desired name
         downloadLink.download = 'Afee-Muhammod-Wafi\'s-Resume.pdf';
         
-        // Trigger the download
         document.body.appendChild(downloadLink);
         downloadLink.click();
         document.body.removeChild(downloadLink);

@@ -169,165 +169,6 @@ body {
     width: 100%;
 }
 
-/* ========== RESPONSIVE DESIGN - MOBILE ========== */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 0.8rem 1.2rem;
-    }
-
-    /* Show hamburger on mobile */
-    .hamburger {
-        display: flex;
-    }
-
-    /* Hide nav links by default on mobile */
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: rgba(3, 7, 18, 0.95);
-        backdrop-filter: blur(16px);
-        padding: 1.5rem 0;
-        margin-top: 0.8rem;
-        border-top: 1px solid rgba(0, 255, 255, 0.2);
-        border-radius: 0 0 1rem 1rem;
-        gap: 0.8rem;
-        align-items: center;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 99;
-    }
-
-    /* Show nav links when active */
-    .nav-links.active {
-        display: flex;
-        animation: slideDown 0.3s ease forwards;
-    }
-
-    /* Slide down animation */
-    @keyframes slideDown {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .nav-links li {
-        width: 100%;
-        text-align: center;
-        padding: 0.3rem 0;
-    }
-
-    .nav-links a {
-        font-size: 1.1rem;
-        padding: 0.5rem 0;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .nav-links a::after {
-        bottom: 0;
-    }
-
-    /* Resume button on mobile */
-    #resumeBtn {
-        padding: 0.5rem 0 !important;
-        width: 100%;
-        justify-content: center;
-    }
-
-    /* Adjust logo size */
-    .logo {
-        font-size: 1.4rem;
-    }
-
-    /* Hero section adjustments */
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .typing-wrapper {
-        font-size: 1.2rem;
-        min-height: 2.8rem;
-    }
-
-    /* Skills grid becomes single column */
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-btn {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.8rem;
-    }
-
-    .education-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-card h3 {
-        font-size: 1.3rem;
-    }
-
-    .cat-title {
-        font-size: 1.1rem;
-    }
-
-    .skill-badge {
-        font-size: 0.8rem;
-        padding: 0.4rem 1rem;
-    }
-
-    .project-icon i {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 1rem;
-    }
-    
-    .cert-card {
-        padding: 1.2rem;
-    }
-    
-    .hero h1 {
-        font-size: 1.6rem;
-    }
-    
-    .project-link {
-        padding: 0.6rem 1.5rem;
-        font-size: 0.9rem;
-    }
-    
-    .skill-category {
-        padding: 1rem;
-    }
-    
-    .project-icon i {
-        font-size: 2rem;
-    }
-
-    .navbar {
-        padding: 0.6rem 1rem;
-    }
-
-    .logo {
-        font-size: 1.2rem;
-    }
-
-    .hamburger .bar {
-        width: 24px;
-        height: 2.5px;
-    }
-}
-
 /* ========== MAIN CONTAINER ========== */
 .container {
     max-width: 1200px;
@@ -689,4 +530,153 @@ h2:after {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+.contact-btn {
+    background: rgba(0, 255, 255, 0.08);
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    padding: 0.8rem 1.8rem;
+    border-radius: 60px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    color: #eef5ff;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.contact-btn i {
+    font-size: 1.3rem;
+    color: #0ff;
+}
+
+.contact-btn:hover {
+    background: #0ff;
+    color: #03050b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.3);
+}
+
+.contact-btn:hover i {
+    color: #03050b;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(0, 255, 255, 0.2);
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #8aa9d6;
+}
+
+/* ========== RESPONSIVE DESIGN - MOBILE ========== */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.8rem 1.2rem;
+    }
+
+    /* Show hamburger on mobile */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hide nav links by default on mobile */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(3, 7, 18, 0.95);
+        backdrop-filter: blur(16px);
+        padding: 1.5rem 0;
+        margin-top: 0.8rem;
+        border-top: 1px solid rgba(0, 255, 255, 0.2);
+        border-radius: 0 0 1rem 1rem;
+        gap: 0.8rem;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 99;
+    }
+
+    /* Show nav links when active */
+    .nav-links.active {
+        display: flex;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    /* Slide down animation */
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 0.3rem 0;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+        padding: 0.5rem 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-links a::after {
+        bottom: 0;
+    }
+
+    /* Resume button on mobile */
+    #resumeBtn {
+        padding: 0.5rem 0 !important;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Adjust logo size */
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    /* Hero section adjustments */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .typing-wrapper {
+        font-size: 1.2rem;
+        min-height: 2.8rem;
+    }
+
+    .contact-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+    }
+
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .cat-title {
+        font-size: 1.1rem;
+    }
+
+    .skill-badge {
+        font-size:
