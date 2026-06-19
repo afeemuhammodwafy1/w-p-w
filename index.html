@@ -1,373 +1,501 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ===== SEO META TAGS ===== -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afee Muhammod Wafy | Portfolio</title>
     
-    <!-- Primary Meta Tags -->
-    <title>Afee Muhammod Wafy | Tech Enthusiast &amp; A-Level Student Portfolio</title>
-    <meta name="title" content="Afee Muhammod Wafy | Tech Enthusiast &amp; A-Level Student" />
-    <meta name="description" content="Portfolio of Afee Muhammod Wafy - A-Level Student, Cybersecurity Enthusiast, and Front-End Developer. Explore my projects, certifications, and technical skills." />
-    <meta name="keywords" content="Afee Muhammod Wafy, Wafy, portfolio, cybersecurity, front-end developer, A-Level student, tech enthusiast, web developer, Bangladesh, WafyOps" />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="English" />
-    <meta name="author" content="Afee Muhammod Wafy" />
-    <meta name="copyright" content="2026 Afee Muhammod Wafy" />
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Afee Muhammod Wafy, an A-Level student, cybersecurity enthusiast, and developer exploring AI and front-end technologies.">
+    <meta name="keywords" content="Afee Muhammod Wafy, Wafy, Portfolio, A-Level Student, Cybersecurity, Front-End Developer, AI Explorer, WafyOps, WafyDocs">
+    <meta name="author" content="Afee Muhammod Wafy">
+    <link rel="canonical" href="https://afeemuhammodwafy1.github.io/">
     
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://afeemuhammodwafy1.github.io/portfolio/" />
-    <meta property="og:title" content="Afee Muhammod Wafy | Tech Enthusiast &amp; A-Level Student" />
-    <meta property="og:description" content="Explore the portfolio of Afee Muhammod Wafy - A-Level Student, Cybersecurity Enthusiast, and Front-End Developer." />
-    <meta property="og:image" content="https://afeemuhammodwafy1.github.io/portfolio/og-image.jpg" />
-    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://afeemuhammodwafy1.github.io/">
+    <meta property="og:title" content="Afee Muhammod Wafy | Portfolio">
+    <meta property="og:description" content="Portfolio of Afee Muhammod Wafy, exploring front-end development, cybersecurity, and artificial intelligence.">
+    <meta property="og:image" content="https://afeemuhammodwafy1.github.io/images/og-image.jpg">
+
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://afeemuhammodwafy1.github.io/portfolio/" />
-    <meta property="twitter:title" content="Afee Muhammod Wafy | Tech Enthusiast &amp; A-Level Student" />
-    <meta property="twitter:description" content="Explore the portfolio of Afee Muhammod Wafy - A-Level Student, Cybersecurity Enthusiast, and Front-End Developer." />
-    <meta property="twitter:image" content="https://afeemuhammodwafy1.github.io/portfolio/og-image.jpg" />
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://afeemuhammodwafy1.github.io/portfolio/" />
-    
-    <!-- ===== FAVICON ===== -->
-    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
-    
-    <!-- ===== FONTS & ICONS ===== -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    
-    <!-- ===== AOS (Animate On Scroll) ===== -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    
-    <!-- ===== CUSTOM STYLES ===== -->
-    <link rel="stylesheet" href="style.css" />
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://afeemuhammodwafy1.github.io/">
+    <meta property="twitter:title" content="Afee Muhammod Wafy | Portfolio">
+    <meta property="twitter:description" content="Portfolio of Afee Muhammod Wafy, exploring front-end development, cybersecurity, and artificial intelligence.">
+
+    <!-- Custom Favicon File -->
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS (Animate On Scroll) Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ===== NAVBAR ===== -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">WAFY</div>
-            <div class="hamburger" id="hamburger">
+    <!-- Header & Navigation -->
+    <header class="navbar-container">
+        <nav class="navbar">
+            <a href="#home" class="nav-logo">WAFY<span class="accent"></span></a>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation menu" id="mobile-menu-btn">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#" id="resumeBtn">Resume</a></li>
+            </button>
+
+            <ul class="nav-links" id="nav-links-list">
+                <li><a href="#home" class="nav-item active">Home</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li><a href="#skills" class="nav-item">Skills</a></li>
+                <li><a href="#projects" class="nav-item">Projects</a></li>
+                <li><a href="#education" class="nav-item">Education</a></li>
+                <li><a href="#certifications" class="nav-item">Certifications</a></li>
+                <li><a href="cv.pdf" download="Afee-Muhammod-Wafi's-Resume.pdf" class="nav-item resume-btn">Resume <i class="fa-solid fa-download"></i></a></li>
             </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <p class="hero-greeting">Hi, I'm</p>
+            <h1 class="hero-title">
+                <span class="name-part name-afee">Afee</span>
+                <span class="name-part name-muhammod">Muhammod</span>
+                <span class="name-part name-wafy">Wafy</span>
+            </h1>
+            <h2 class="hero-subtitle">
+                I am an <span class="typing-text" id="typing-element"></span><span class="typed-cursor">|</span>
+            </h2>
+            <p class="hero-description">
+                Building foundation in computer systems, modern web development, and defensive security. Currently pursuing A-Levels with a focus on practical applications.
+            </p>
+            
+            <div class="social-links">
+                <a href="https://github.com/afeemuhammodwafy1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/afeemuhammodwafy1" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://wa.me/8801644568471" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:afeemuhammodwafy@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+
+            <div class="hero-cta">
+                <a href="#footer" class="btn btn-primary">Let's Connect <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
         </div>
-    </nav>
+    </section>
 
-    <!-- ===== MAIN ===== -->
-    <main class="container">
+    <!-- About Section -->
+    <section id="about" class="about-section container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="subtitle">Get To Know Me</span>
+            <h2 class="title">About Me</h2>
+        </div>
 
-        <!-- HOME -->
-        <section id="home" data-aos="fade-up" data-aos-duration="1000">
-            <div class="hero glass-card">
-                <h1>Afee Muhammod Wafy</h1>
-                <div class="typing-wrapper">
-                    <span class="typed-text" id="typing-animation"></span>
+        <div class="about-card glass" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-text">
+                <p>
+                    I am an A-Level student with a deep interest in technology, system design, and security architectures. My academic path is integrated with self-directed learning to build practical skills across software development, network concepts, and systems protection.
+                </p>
+                <p>
+                    I enjoy discovering how complex digital environments work, analyzing structural vulnerabilities, and using web development technologies to build practical solutions. My target is to merge structured academic research with hands-on practice, preparing myself for a contribution to the evolving cybersecurity space.
+                </p>
+                <p>
+                    Beyond my textbooks, I spend my time exploring open-source utilities, setting up lab environments, and keeping up with developments in machine learning and defensive technology techniques.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="subtitle">What I Work With</span>
+            <h2 class="title">Technical Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+            <!-- Category 1 -->
+            <div class="skills-card glass" data-aos="fade-up" data-aos-delay="100">
+                <div class="skills-category-header">
+                    <i class="fa-solid fa-shield-halved category-icon"></i>
+                    <h3>Security &amp; Networking</h3>
                 </div>
-                <p>A-Level Student | Tech Explorer | Lifelong Learner</p>
-                <div class="hero-social">
-                    <a href="https://github.com/afeemuhammodwafy1" target="_blank" aria-label="GitHub" data-aos="fade-up" data-aos-delay="100"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/afeemuhammodwafy1" target="_blank" aria-label="LinkedIn" data-aos="fade-up" data-aos-delay="200"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/8801644568471" target="_blank" aria-label="WhatsApp" data-aos="fade-up" data-aos-delay="300"><i class="fab fa-whatsapp"></i></a>
-                    <a href="mailto:afeemuhammodwafy@gmail.com" aria-label="Email" data-aos="fade-up" data-aos-delay="400"><i class="fas fa-envelope"></i></a>
+                <div class="skills-badges">
+                    <span class="skill-badge"><i class="fa-solid fa-network-wired"></i> Network Basics</span>
+                    <span class="skill-badge"><i class="fa-solid fa-user-shield"></i> Defensive Security</span>
+                    <span class="skill-badge"><i class="fa-solid fa-lock"></i> Encryption Concepts</span>
+                    <span class="skill-badge"><i class="fa-solid fa-bug"></i> Vulnerability Analysis</span>
                 </div>
             </div>
-        </section>
 
-        <!-- ABOUT -->
-        <section id="about" data-aos="fade-up" data-aos-duration="800">
-            <h2>About Me</h2>
-            <div class="glass-card about-text" data-aos="fade-up" data-aos-delay="100">
-                <p>As an A Level student, I'm becoming more interested in technology and how contemporary systems affect the world. I like learning new concepts, comprehending how things operate, and creating a methodical approach to education. I'm currently laying the groundwork through diligent study, inquisitiveness, and brief, independent investigations.</p>
-                <br />
-                <p>I enjoy interacting with individuals who share knowledge, think critically, and take pleasure in talking about technology, educational opportunities, or personal development. I'm always willing to have deep discussions, gain new perspectives, and build relationships with professionals, students, and learners from various backgrounds. I'd be happy to connect with you if you enjoy exchanging ideas or learning about tech-related subjects.</p>
-            </div>
-        </section>
-
-        <!-- SKILLS -->
-        <section id="skills" data-aos="fade-up" data-aos-duration="800">
-            <h2>Technical Skills</h2>
-            <p class="section-sub">Technologies & tools I work with</p>
-            <div class="skills-wrapper">
-                <div class="skill-category" data-aos="fade-right" data-aos-delay="100">
-                    <h3 class="cat-title"><i class="fas fa-shield-alt"></i> Security & Networking</h3>
-                    <div class="tags-container">
-                        <span class="skill-badge"><i class="fas fa-shield-virus"></i> Network Security</span>
-                        <span class="skill-badge"><i class="fas fa-lock"></i> Cybersecurity</span>
-                        <span class="skill-badge"><i class="fab fa-bitcoin"></i> Cryptocurrency</span>
-                    </div>
+            <!-- Category 2 -->
+            <div class="skills-card glass" data-aos="fade-up" data-aos-delay="200">
+                <div class="skills-category-header">
+                    <i class="fa-solid fa-code category-icon"></i>
+                    <h3>Programming &amp; Development</h3>
                 </div>
-                <div class="skill-category" data-aos="fade-left" data-aos-delay="200">
-                    <h3 class="cat-title"><i class="fas fa-code"></i> Programming & Development</h3>
-                    <div class="tags-container">
-                        <span class="skill-badge"><i class="fab fa-python"></i> Python</span>
-                        <span class="skill-badge"><i class="fab fa-css3-alt"></i> CSS3</span>
-                        <span class="skill-badge"><i class="fab fa-html5"></i> HTML5</span>
-                        <span class="skill-badge"><i class="fas fa-code-branch"></i> Front-End Development</span>
-                    </div>
-                </div>
-                <div class="skill-category" data-aos="fade-right" data-aos-delay="300">
-                    <h3 class="cat-title"><i class="fas fa-microchip"></i> AI & Emerging Technologies</h3>
-                    <div class="tags-container">
-                        <span class="skill-badge"><i class="fas fa-robot"></i> Artificial Intelligence (AI)</span>
-                    </div>
-                </div>
-                <div class="skill-category" data-aos="fade-left" data-aos-delay="400">
-                    <h3 class="cat-title"><i class="fas fa-paintbrush"></i> Design & Creativity</h3>
-                    <div class="tags-container">
-                        <span class="skill-badge"><i class="fab fa-canva"></i> Canva</span>
-                        <span class="skill-badge"><i class="fas fa-palette"></i> Graphic Design</span>
-                    </div>
-                </div>
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
-                    <h3 class="cat-title"><i class="fas fa-file-alt"></i> Microsoft Office Suite</h3>
-                    <div class="tags-container">
-                        <span class="skill-badge"><i class="fas fa-chart-line"></i> Microsoft Excel</span>
-                        <span class="skill-badge"><i class="fas fa-file-powerpoint"></i> Microsoft PowerPoint</span>
-                        <span class="skill-badge"><i class="fas fa-file-word"></i> Microsoft Word</span>
-                    </div>
+                <div class="skills-badges">
+                    <span class="skill-badge"><i class="fa-brands fa-html5"></i> HTML5</span>
+                    <span class="skill-badge"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                    <span class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+                    <span class="skill-badge"><i class="fa-brands fa-python"></i> Python Basics</span>
+                    <span class="skill-badge"><i class="fa-brands fa-git-alt"></i> Git Version Control</span>
                 </div>
             </div>
-        </section>
 
-        <!-- ===== PROJECTS SECTION - UPDATED WITH WAFYOPS ===== -->
-        <section id="projects" data-aos="fade-up" data-aos-duration="800">
-            <h2>Projects</h2>
-            <p class="section-sub">Featured work & personal projects</p>
-            <div class="projects-grid">
-                <div class="project-card glass-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="project-icon"><i class="fas fa-terminal"></i></div>
-                    <h3>WafyOps - Developer & Utility Toolbox</h3>
-                    <div class="project-tech-stack">
-                        <span class="tech-stack-tag"><i class="fab fa-html5"></i> HTML5</span>
-                        <span class="tech-stack-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
-                        <span class="tech-stack-tag"><i class="fab fa-js"></i> JavaScript</span>
-                        <span class="tech-stack-tag"><i class="fab fa-font-awesome"></i> Font Awesome</span>
-                    </div>
-                    <p class="project-description">A free suite of fast, secure, and daily web utilities built to simplify your digital tasks. Features a password generator, text case & analytics tool, QR code generator, and a color palette terminal—all in a modern, glassmorphic interface.</p>
-                    <div class="project-links">
-                        <a href="https://afeemuhammodwafy1.github.io/wafyops/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="https://github.com/afeemuhammodwafy1/wafyops" target="_blank" class="project-link github-link"><i class="fab fa-github"></i> Source Code</a>
-                    </div>
+            <!-- Category 3 -->
+            <div class="skills-card glass" data-aos="fade-up" data-aos-delay="300">
+                <div class="skills-category-header">
+                    <i class="fa-solid fa-brain category-icon"></i>
+                    <h3>AI &amp; Emerging Tech</h3>
+                </div>
+                <div class="skills-badges">
+                    <span class="skill-badge"><i class="fa-solid fa-robot"></i> LLM Prompting</span>
+                    <span class="skill-badge"><i class="fa-solid fa-microchip"></i> AI Technologies</span>
+                    <span class="skill-badge"><i class="fa-solid fa-database"></i> Structured Data</span>
                 </div>
             </div>
-        </section>
 
-        <!-- EDUCATION -->
-        <section id="education" data-aos="fade-up" data-aos-duration="800">
-            <h2>Education</h2>
-            <p class="section-sub">My academic journey</p>
-            <div class="education-grid">
-                <div class="edu-card glass-card" data-aos="fade-right" data-aos-delay="100">
-                    <div class="edu-icon"><i class="fas fa-university"></i></div>
-                    <h3>Higher Secondary Certificate (HSC)</h3>
-                    <p class="institution"><i class="fas fa-calendar-alt"></i> 2024 - Present</p>
-                    <p class="edu-description">Currently pursuing A-Levels in Science group with focus on analytical thinking, mathematics, physics, and emerging technologies.</p>
+            <!-- Category 4 -->
+            <div class="skills-card glass" data-aos="fade-up" data-aos-delay="400">
+                <div class="skills-category-header">
+                    <i class="fa-solid fa-palette category-icon"></i>
+                    <h3>Design &amp; Creativity</h3>
                 </div>
-                <div class="edu-card glass-card" data-aos="fade-left" data-aos-delay="200">
-                    <div class="edu-icon"><i class="fas fa-school"></i></div>
-                    <h3>Secondary School Certificate (SSC)</h3>
-                    <p class="institution"><i class="fas fa-calendar-alt"></i> Completed 2024</p>
-                    <p class="edu-description">Successfully completed Secondary School Certificate in Science division with excellent academic record.</p>
+                <div class="skills-badges">
+                    <span class="skill-badge"><i class="fa-solid fa-bezier-curve"></i> UI/UX Layouts</span>
+                    <span class="skill-badge"><i class="fa-solid fa-image"></i> Canva Design</span>
+                    <span class="skill-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Visual Design</span>
                 </div>
             </div>
-        </section>
 
-        <!-- CERTIFICATIONS -->
-        <section id="certifications" data-aos="fade-up" data-aos-duration="800">
-            <div class="certifications-wrapper">
-                <h2>Certifications</h2>
-                <p class="section-sub">Professional credentials & verified achievements</p>
-                <div class="certs-grid">
-                    <div class="cert-card glass-card" data-aos="flip-up" data-aos-delay="100">
-                        <div class="cert-icon"><i class="fas fa-robot"></i></div>
-                        <h3>Digital Skills: AI</h3>
-                        <p class="cert-provider"><i class="fas fa-graduation-cap"></i> FutureLearn</p>
-                        <a class="verify-link" href="https://www.futurelearn.com/certificates/e6npdxg" target="_blank"><i class="fas fa-arrow-right"></i> Verify</a>
-                    </div>
-                    <div class="cert-card glass-card" data-aos="flip-up" data-aos-delay="150">
-                        <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
-                        <h3>Intro to Cyber Security</h3>
-                        <p class="cert-provider"><i class="fas fa-graduation-cap"></i> FutureLearn</p>
-                        <a class="verify-link" href="https://www.futurelearn.com/certificates/h6davat" target="_blank"><i class="fas fa-arrow-right"></i> Verify</a>
-                    </div>
-                    <div class="cert-card glass-card" data-aos="flip-up" data-aos-delay="200">
-                        <div class="cert-icon"><i class="fab fa-python"></i></div>
-                        <h3>Basics of Python</h3>
-                        <p class="cert-provider"><i class="fas fa-graduation-cap"></i> UniAthena</p>
-                        <a class="verify-link" href="https://uniathena.com/verify/certificate?certID=8781-9786-7632" target="_blank"><i class="fas fa-arrow-right"></i> Verify</a>
-                    </div>
-                    <div class="cert-card glass-card" data-aos="flip-up" data-aos-delay="250">
-                        <div class="cert-icon"><i class="fas fa-palette"></i></div>
-                        <h3>Canva For Beginners</h3>
-                        <p class="cert-provider"><i class="fas fa-graduation-cap"></i> Simplilearn</p>
-                        <a class="verify-link" href="https://simpli-web.app.link/e/DXiqi2ANM1b" target="_blank"><i class="fas fa-arrow-right"></i> Verify</a>
-                    </div>
-                    <div class="cert-card glass-card" data-aos="flip-up" data-aos-delay="300">
-                        <div class="cert-icon"><i class="fas fa-chart-line"></i></div>
-                        <h3>Excel: Zero to Hero</h3>
-                        <p class="cert-provider"><i class="fas fa-graduation-cap"></i> Udemy</p>
-                        <a class="verify-link" href="https://udemy.com/certificate/UC-04491d93-4e56-413d-9c41-da1642c5844d/" target="_blank"><i class="fas fa-arrow-right"></i> Verify</a>
-                    </div>
-                    <div class="cert-card glass-card" data-aos="flip-up" data-aos-delay="350">
-                        <div class="cert-icon"><i class="fab fa-html5"></i></div>
-                        <h3>Introduction to HTML</h3>
-                        <p class="cert-provider"><i class="fas fa-graduation-cap"></i> Simplilearn</p>
-                        <a class="verify-link" href="https://simpli-web.app.link/e/isp9CvQ6G1b" target="_blank"><i class="fas fa-arrow-right"></i> Verify</a>
-                    </div>
+            <!-- Category 5 -->
+            <div class="skills-card glass" data-aos="fade-up" data-aos-delay="500">
+                <div class="skills-category-header">
+                    <i class="fa-solid fa-file-invoice category-icon"></i>
+                    <h3>Microsoft Office Suite</h3>
+                </div>
+                <div class="skills-badges">
+                    <span class="skill-badge"><i class="fa-regular fa-file-word"></i> MS Word</span>
+                    <span class="skill-badge"><i class="fa-regular fa-file-excel"></i> MS Excel</span>
+                    <span class="skill-badge"><i class="fa-regular fa-file-powerpoint"></i> MS PowerPoint</span>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="subtitle">My Work</span>
+            <h2 class="title">Projects</h2>
+        </div>
 
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-social">
-                <a href="https://github.com/afeemuhammodwafy1" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/afeemuhammodwafy1" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://twitter.com/muhammodwafy" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com/afeemuhammodwafy" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://facebook.com/afeemuhammodwafy" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="mailto:afeemuhammodwafy@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <div class="projects-grid">
+            <!-- Project 1: WafyOps -->
+            <div class="project-card glass" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-icon-wrapper">
+                    <i class="fa-solid fa-terminal project-icon"></i>
+                </div>
+                <h3 class="project-title">WafyOps - Developer &amp; Utility Toolbox</h3>
+                <p class="project-description">
+                    A free suite of fast, secure, and daily web utilities built to simplify your digital tasks. Features a password generator, text case &amp; analytics tool, QR code generator, and a color palette terminal—all in a modern, glassmorphic interface.
+                </p>
+                
+                <div class="project-tech-stack">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Font Awesome</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/afeemuhammodwafy1/wafyops" target="_blank" rel="noopener noreferrer" class="proj-link secondary"><i class="fa-brands fa-github"></i> Source Code</a>
+                    <a href="https://afeemuhammodwafy1.github.io/wafyops/" target="_blank" rel="noopener noreferrer" class="proj-link primary">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
             </div>
-            <p>© 2026 Wafy — Built with <i class="fas fa-heart" style="color:#0ff;"></i> &amp; passion for technology</p>
+
+            <!-- Project 2: WafyDocs -->
+            <div class="project-card glass" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-icon-wrapper">
+                    <i class="fa-solid fa-copy project-icon"></i>
+                </div>
+                <h3 class="project-title">WafyDocs - Markdown to PDF &amp; Text Converter</h3>
+                <p class="project-description">
+                    A fast, lightweight, and efficient tool to instantly convert your Markdown content into professional PDF and text documents.
+                </p>
+                
+                <div class="project-tech-stack">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/afeemuhammodwafy1/wafydocs" target="_blank" rel="noopener noreferrer" class="proj-link secondary"><i class="fa-brands fa-github"></i> Source Code</a>
+                    <a href="https://afeemuhammodwafy1.github.io/wafydocs/" target="_blank" rel="noopener noreferrer" class="proj-link primary">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="subtitle">Academic Journey</span>
+            <h2 class="title">Education</h2>
+        </div>
+
+        <div class="education-grid">
+            <!-- Education Card 1 -->
+            <div class="education-card glass" data-aos="fade-up" data-aos-delay="100">
+                <div class="edu-header">
+                    <i class="fa-solid fa-user-graduate edu-icon"></i>
+                    <div>
+                        <span class="edu-duration">2024 - Present</span>
+                        <h3 class="edu-degree">Higher Secondary Certificate (HSC)</h3>
+                    </div>
+                </div>
+                <div class="edu-details">
+                    <p class="edu-institution">A-Level Focus</p>
+                    <p class="edu-desc">Concentrating on foundational science and mathematics electives, strengthening quantitative reasoning and logical analysis skills essential for higher computing studies.</p>
+                </div>
+            </div>
+
+            <!-- Education Card 2 -->
+            <div class="education-card glass" data-aos="fade-up" data-aos-delay="200">
+                <div class="edu-header">
+                    <i class="fa-solid fa-school edu-icon"></i>
+                    <div>
+                        <span class="edu-duration">Completed 2024</span>
+                        <h3 class="edu-degree">Secondary School Certificate (SSC)</h3>
+                    </div>
+                </div>
+                <div class="edu-details">
+                    <p class="edu-institution">Science Discipline</p>
+                    <p class="edu-desc">Completed secondary science curriculum with balanced performance, establishing foundational knowledge in physics, chemistry, mathematics, and introductory computer technologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="subtitle">Validations &amp; Learning</span>
+            <h2 class="title">Certifications</h2>
+        </div>
+
+        <div class="certifications-grid">
+            <!-- Cert 1 -->
+            <div class="cert-card glass" data-aos="fade-up" data-aos-delay="50">
+                <div class="cert-icon-wrapper">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+                <h3 class="cert-title">Digital Skills: AI</h3>
+                <p class="cert-provider">FutureLearn</p>
+                <div class="cert-footer">
+                    <a href="https://www.futurelearn.com/certificates/e6npdxg" target="_blank" rel="noopener noreferrer" class="cert-verify">Verify Link</a>
+                </div>
+            </div>
+
+            <!-- Cert 2 -->
+            <div class="cert-card glass" data-aos="fade-up" data-aos-delay="100">
+                <div class="cert-icon-wrapper">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="cert-title">Intro to Cyber Security</h3>
+                <p class="cert-provider">FutureLearn</p>
+                <div class="cert-footer">
+                    <a href="https://www.futurelearn.com/certificates/h6davat" target="_blank" rel="noopener noreferrer" class="cert-verify">Verify Link</a>
+                </div>
+            </div>
+
+            <!-- Cert 3 -->
+            <div class="cert-card glass" data-aos="fade-up" data-aos-delay="150">
+                <div class="cert-icon-wrapper">
+                    <i class="fa-brands fa-python"></i>
+                </div>
+                <h3 class="cert-title">Basics of Python</h3>
+                <p class="cert-provider">UniAthena</p>
+                <div class="cert-footer">
+                    <a href="https://uniathena.com/verify/certificate?certID=8781-9786-7632" target="_blank" rel="noopener noreferrer" class="cert-verify">Verify Link</a>
+                </div>
+            </div>
+
+            <!-- Cert 4 -->
+            <div class="cert-card glass" data-aos="fade-up" data-aos-delay="200">
+                <div class="cert-icon-wrapper">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <h3 class="cert-title">Canva for Beginners</h3>
+                <p class="cert-provider">Simplilearn</p>
+                <div class="cert-footer">
+                    <a href="https://simpli-web.app.link/e/DXiqi2ANM1b" target="_blank" rel="noopener noreferrer" class="cert-verify">Verify Link</a>
+                </div>
+            </div>
+
+            <!-- Cert 5 -->
+            <div class="cert-card glass" data-aos="fade-up" data-aos-delay="250">
+                <div class="cert-icon-wrapper">
+                    <i class="fa-regular fa-file-excel"></i>
+                </div>
+                <h3 class="cert-title">Excel: Zero to Hero</h3>
+                <p class="cert-provider">Udemy</p>
+                <div class="cert-footer">
+                    <a href="https://udemy.com/certificate/UC-04491d93-4e56-413d-9c41-da1642c5844d/" target="_blank" rel="noopener noreferrer" class="cert-verify">Verify Link</a>
+                </div>
+            </div>
+
+            <!-- Cert 6 -->
+            <div class="cert-card glass" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-icon-wrapper">
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+                <h3 class="cert-title">Introduction to HTML</h3>
+                <p class="cert-provider">Simplilearn</p>
+                <div class="cert-footer">
+                    <a href="https://simpli-web.app.link/e/isp9CvQ6G1b" target="_blank" rel="noopener noreferrer" class="cert-verify">Verify Link</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="footer-content container">
+            <h3 class="footer-title">Let's Connect</h3>
+            <p class="footer-desc">Feel free to reach out for collaborations, project sharing, or technical discussions.</p>
+            
+            <div class="footer-social-links">
+                <a href="https://github.com/afeemuhammodwafy1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/afeemuhammodwafy1" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/muhammodwafy" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://instagram.com/afeemuhammodwafy" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com/afeemuhammodwafy" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="mailto:afeemuhammodwafy@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            
+            <div class="footer-divider"></div>
+            <p class="copyright">&copy; 2026 Wafy — Built with ❤️ &amp; passion for technology</p>
         </div>
     </footer>
 
-    <!-- ===== BACK TO TOP ===== -->
-    <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
-    <!-- ===== AOS SCRIPT ===== -->
+    <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- ===== CUSTOM SCRIPTS ===== -->
+
+    <!-- Custom JS -->
     <script>
-        // ===== Initialize AOS =====
+        // Initialize AOS
         AOS.init({
             duration: 800,
-            once: false,
-            offset: 50,
-            easing: 'ease-in-out'
+            once: true,
+            mirror: false
         });
 
-        // ===== Typing Animation =====
-        const roles = ["A-Level Student", "Cybersecurity Enthusiast", "Front-End Developer", "AI & Tech Explorer"];
-        let roleIndex = 0,
-            charIndex = 0,
-            isDeleting = false;
-        const typedSpan = document.getElementById("typing-animation");
+        // Hamburger Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navLinksList = document.getElementById('nav-links-list');
+        const navItems = document.querySelectorAll('.nav-item');
 
-        function typeEffect() {
-            if (!typedSpan) return;
-            const currentRole = roles[roleIndex];
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinksList.classList.toggle('active');
+        });
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinksList.classList.remove('active');
+            });
+        });
+
+        // Lightweight Typing Animation Logic
+        const typingElement = document.getElementById('typing-element');
+        const phrases = ["A-Level Student", "Cybersecurity Enthusiast", "Front-End Developer", "AI & Tech Explorer"];
+        let phraseIdx = 0;
+        let charIdx = 0;
+        let isDeleting = false;
+        let typingSpeed = 100;
+
+        function typeLoop() {
+            const currentPhrase = phrases[phraseIdx];
             if (isDeleting) {
-                typedSpan.innerText = currentRole.substring(0, charIndex - 1);
-                charIndex--;
-                if (charIndex === 0) {
-                    isDeleting = false;
-                    roleIndex = (roleIndex + 1) % roles.length;
-                    setTimeout(typeEffect, 300);
-                    return;
-                }
-                setTimeout(typeEffect, 60);
+                typingElement.textContent = currentPhrase.substring(0, charIdx - 1);
+                charIdx--;
+                typingSpeed = 50;
             } else {
-                typedSpan.innerText = currentRole.substring(0, charIndex + 1);
-                charIndex++;
-                if (charIndex === currentRole.length) {
-                    isDeleting = true;
-                    setTimeout(typeEffect, 1800);
-                    return;
-                }
-                setTimeout(typeEffect, 100);
+                typingElement.textContent = currentPhrase.substring(0, charIdx + 1);
+                charIdx++;
+                typingSpeed = 100;
             }
+
+            if (!isDeleting && charIdx === currentPhrase.length) {
+                isDeleting = true;
+                typingSpeed = 2000; // Pause at end of text
+            } else if (isDeleting && charIdx === 0) {
+                isDeleting = false;
+                phraseIdx = (phraseIdx + 1) % phrases.length;
+                typingSpeed = 500; // Pause before typing next word
+            }
+
+            setTimeout(typeLoop, typingSpeed);
         }
-        typeEffect();
+        document.addEventListener('DOMContentLoaded', () => setTimeout(typeLoop, 500));
 
-        // ===== Hamburger =====
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
+        // Active Link Highlighting on Scroll
+        const sections = document.querySelectorAll('section, footer');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
             });
-        });
 
-        // ===== Smooth Scroll =====
-        document.querySelectorAll('.nav-links a:not(#resumeBtn)').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const target = document.getElementById(targetId);
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                    document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                const href = item.getAttribute('href');
+                if (href === `#${current}`) {
+                    item.classList.add('active');
                 }
             });
         });
 
-        // ===== Resume Download =====
-        document.getElementById('resumeBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            const link = document.createElement('a');
-            link.href = 'cv.pdf';
-            link.download = 'Afee-Muhammod-Wafi\'s-Resume.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
+        // Floating Back to Top Button Logic
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
         });
 
-        // ===== Back to Top =====
-        const backBtn = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            backBtn.classList.toggle('show', window.scrollY > 300);
-        });
-        backBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // ===== Active Link on Scroll =====
-        window.addEventListener('scroll', () => {
-            const scrollPos = window.scrollY + 120;
-            document.querySelectorAll('section').forEach(section => {
-                const top = section.offsetTop;
-                const height = section.offsetHeight;
-                if (scrollPos >= top && scrollPos < top + height) {
-                    const id = section.getAttribute('id');
-                    document.querySelectorAll('.nav-links a').forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === `#${id}`) {
-                            link.classList.add('active');
-                        }
-                    });
-                }
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
     </script>
-
 </body>
 </html>
