@@ -696,27 +696,25 @@ h1, h2, h3, h4 {
         display: flex;
     }
 
-    /* Mobile Navigation Slide-Down setup with safe height and scrolling overflow */
+    /* Mobile Navigation Slide-Down setup */
     .nav-links {
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        max-height: 0; /* Use max-height instead of fixed height for fluid transition */
+        height: 0;
         overflow: hidden;
         flex-direction: column;
         background: rgba(3, 5, 11, 0.95);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         gap: 0;
-        transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         border-bottom: 0px solid rgba(0, 255, 255, 0.1);
     }
 
     .nav-links.active {
-        max-height: calc(100vh - 80px); /* Restricts height to visible viewport below header */
-        overflow-y: auto; /* Enables scrolling for short viewports or landscape mode */
-        padding-bottom: 24px; /* Adds safe padding below the Resume button */
+        height: 380px;
         border-bottom: 1px solid rgba(0, 255, 255, 0.1);
     }
 
