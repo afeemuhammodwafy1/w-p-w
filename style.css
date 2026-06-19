@@ -232,7 +232,7 @@ h1, h2, h3, h4 {
     margin-bottom: 12px;
 }
 
-/* Responsive Single-line Hero Title Styling */
+/* Responsive Single-line Hero Title Styling - Now featuring a single solid color */
 .hero-title {
     display: flex;
     flex-wrap: nowrap;
@@ -247,27 +247,15 @@ h1, h2, h3, h4 {
     width: 100%;
 }
 
+/* Name Parts - Styled with a single solid color (#ffffff) and a smooth hover state */
 .name-part {
     display: inline-block;
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ffffff;
+    transition: color 0.3s ease;
 }
 
-/* "Afee": White to Light Blue */
-.name-afee {
-    background-image: linear-gradient(135deg, #ffffff 30%, #a0c4ff 100%);
-}
-
-/* "Muhammod": Light Blue to Cyan */
-.name-muhammod {
-    background-image: linear-gradient(135deg, #a0c4ff 0%, #00ffff 100%);
-}
-
-/* "Wafy": Cyan to Deep Blue */
-.name-wafy {
-    background-image: linear-gradient(135deg, #00ffff 10%, #0044ff 100%);
+.name-part:hover {
+    color: var(--accent); /* Smoothly transitions to cyan on hover */
 }
 
 .hero-subtitle {
@@ -296,7 +284,7 @@ h1, h2, h3, h4 {
     margin: 0 auto 36px auto;
 }
 
-/* Social link buttons */
+/* Social link buttons - ensuring styles override default anchor properties */
 .social-links {
     display: flex;
     justify-content: center;
@@ -310,18 +298,18 @@ h1, h2, h3, h4 {
     border-radius: 50%;
     border: var(--glass-border);
     background: var(--glass-bg);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-primary);
+    color: var(--text-primary) !important;
     font-size: 1.25rem;
-    text-decoration: none;
+    text-decoration: none !important;
     transition: all 0.3s ease;
 }
 
 .social-links a:hover {
     border-color: var(--accent);
-    color: var(--accent);
+    color: var(--accent) !important;
     transform: translateY(-3px);
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
 }
