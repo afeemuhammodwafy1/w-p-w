@@ -3,7 +3,7 @@
 [![Live Demo](https://img.shields.io/badge/Live_Demo-View_Portfolio-0ff?style=for-the-badge&logo=github)](https://afeemuhammodwafy1.github.io/w-p-w/)
 [![GitHub](https://img.shields.io/badge/GitHub-View_Source-181717?style=for-the-badge&logo=github)](https://github.com/afeemuhammodwafy1/portfolio)
 
-> A modern, dark-themed personal portfolio website showcasing my skills, projects, certifications, and journey as a tech enthusiast and A-Level student.
+> A modern, dark-themed personal portfolio website showcasing my skills, projects, certifications, and journey as a tech enthusiast and Science student.
 
 ![Portfolio Preview](https://via.placeholder.com/1200x630/0a0f1e/0ff?text=Portfolio+Preview)
 
