@@ -238,8 +238,11 @@ h1, h2, h3, h4 {
     justify-content: center;
     align-items: center;
     white-space: nowrap;
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    gap: 0 clamp(4px, 1vw, 16px);
+    
+    /* Dynamically scale down font size on mobile screens to prevent text wrap & clipping */
+    font-size: clamp(1.4rem, 5.5vw, 4.5rem); 
+    gap: 0 clamp(4px, 1.2vw, 16px);        /* Dynamically scales word gaps */
+    
     line-height: 1.2;
     margin-bottom: 16px;
     color: var(--text-primary);
@@ -708,26 +711,29 @@ h1, h2, h3, h4 {
         display: flex;
     }
 
-    /* Mobile Navigation Slide-Down setup */
+    /* Mobile Navigation Slide-Down setup - Completely updated to avoid fixed heights and cutoff bugs */
     .nav-links {
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        height: 0;
+        max-height: 0; /* Changed from height: 0 to allow fluid max-height transition */
         overflow: hidden;
         flex-direction: column;
-        background: rgba(3, 5, 11, 0.95);
+        background: rgba(3, 5, 11, 0.98); /* Solid overlay to completely block underlying content */
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         gap: 0;
-        transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s ease;
         border-bottom: 0px solid rgba(0, 255, 255, 0.1);
+        padding: 0; /* Explicitly reset to 0 in inactive state */
     }
 
     .nav-links.active {
-        height: 380px;
-        border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+        max-height: 480px; /* Safe expanded limit to comfortably hold all 7 menu items */
+        padding: 16px 0 24px 0; /* Safe vertical padding to contain the bottom of the resume button */
+        border-bottom: 1px solid rgba(0, 255, 255, 0.15);
+        overflow-y: auto; /* Fallback vertical scroll for extremely small viewports */
     }
 
     .nav-links li {
@@ -737,14 +743,17 @@ h1, h2, h3, h4 {
 
     .nav-item {
         display: block;
-        padding: 16px 0;
+        padding: 12px 0; /* Compacted height to safely fit smaller phone viewports */
         width: 100%;
     }
 
     .resume-btn {
-        margin: 16px auto;
-        width: max-content;
-        display: inline-block;
+        margin: 12px auto 0 auto; /* Balanced top margin to prevent overlapping elements, removed bottom margin */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 24px;
+        width: auto;
     }
 
     /* Toggle Hamburger Animation */
