@@ -212,7 +212,7 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 120px 24px 60px 24px; /* Padding-top safely pushes content below fixed navbar */
+    padding: 120px 24px 60px 24px;
     text-align: center;
     position: relative;
 }
@@ -238,11 +238,8 @@ h1, h2, h3, h4 {
     justify-content: center;
     align-items: center;
     white-space: nowrap;
-    
-    /* Dynamically scale down font size on mobile screens to prevent text wrap & clipping */
-    font-size: clamp(1.4rem, 5.5vw, 4.5rem); 
-    gap: 0 clamp(4px, 1.2vw, 16px);        /* Dynamically scales word gaps */
-    
+    font-size: clamp(1.4rem, 5.5vw, 4.5rem);
+    gap: 0 clamp(4px, 1.2vw, 16px);
     line-height: 1.2;
     margin-bottom: 16px;
     color: var(--text-primary);
@@ -257,7 +254,7 @@ h1, h2, h3, h4 {
 }
 
 .name-part:hover {
-    color: var(--accent); /* Smoothly transitions to cyan on hover */
+    color: var(--accent);
 }
 
 .hero-subtitle {
@@ -283,7 +280,7 @@ h1, h2, h3, h4 {
     font-size: 1.05rem;
     color: var(--text-secondary);
     max-width: 650px;
-    margin: 0 auto 36px auto; /* Centered */
+    margin: 0 auto 36px auto;
 }
 
 /* Social link buttons - Centered */
@@ -408,20 +405,31 @@ h1, h2, h3, h4 {
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
 }
 
-/* Projects Section Styling - Multi-Column Grid */
+/* Projects Section - Flexbox with max 2 per row */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 24px;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
+    justify-content: center;
 }
 
 .project-card {
+    flex: 1 1 calc(50% - 12px);
+    min-width: 280px;
+    max-width: calc(50% - 12px);
     padding: 40px;
     display: flex;
     flex-direction: column;
     height: 100%;
+}
+
+/* When only 1 card in the row, it centers nicely */
+.project-card:only-child {
+    flex: 1 1 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .project-icon-wrapper {
@@ -449,7 +457,7 @@ h1, h2, h3, h4 {
 .project-description {
     color: var(--text-secondary);
     margin-bottom: 24px;
-    flex-grow: 1; /* Aligns card heights by pushing tech stack to bottom */
+    flex-grow: 1;
 }
 
 .project-tech-stack {
@@ -699,41 +707,47 @@ h1, h2, h3, h4 {
     50% { opacity: 0; }
 }
 
-/* Media Queries for responsive systems */
+/* Responsive: Tablet and below - 1 column for projects */
 @media (max-width: 992px) {
+    .project-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
     .education-grid {
         grid-template-columns: 1fr;
     }
 }
 
+/* Responsive: Mobile */
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
     }
 
-    /* Mobile Navigation Slide-Down setup - Completely updated to avoid fixed heights and cutoff bugs */
+    /* Mobile Navigation Slide-Down setup */
     .nav-links {
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        max-height: 0; /* Changed from height: 0 to allow fluid max-height transition */
+        max-height: 0;
         overflow: hidden;
         flex-direction: column;
-        background: rgba(3, 5, 11, 0.98); /* Solid overlay to completely block underlying content */
+        background: rgba(3, 5, 11, 0.98);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         gap: 0;
         transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s ease;
         border-bottom: 0px solid rgba(0, 255, 255, 0.1);
-        padding: 0; /* Explicitly reset to 0 in inactive state */
+        padding: 0;
     }
 
     .nav-links.active {
-        max-height: 480px; /* Safe expanded limit to comfortably hold all 7 menu items */
-        padding: 16px 0 24px 0; /* Safe vertical padding to contain the bottom of the resume button */
+        max-height: 480px;
+        padding: 16px 0 24px 0;
         border-bottom: 1px solid rgba(0, 255, 255, 0.15);
-        overflow-y: auto; /* Fallback vertical scroll for extremely small viewports */
+        overflow-y: auto;
     }
 
     .nav-links li {
@@ -743,12 +757,12 @@ h1, h2, h3, h4 {
 
     .nav-item {
         display: block;
-        padding: 12px 0; /* Compacted height to safely fit smaller phone viewports */
+        padding: 12px 0;
         width: 100%;
     }
 
     .resume-btn {
-        margin: 12px auto 0 auto; /* Balanced top margin to prevent overlapping elements, removed bottom margin */
+        margin: 12px auto 0 auto;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -784,6 +798,7 @@ h1, h2, h3, h4 {
 
     .project-card {
         padding: 28px 20px;
+        min-width: unset;
     }
 }
 

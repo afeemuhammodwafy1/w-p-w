@@ -49,8 +49,8 @@
     <!-- AOS (Animate On Scroll) Library CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Custom CSS (With Cache Busting Parameter to Force GitHub Update) -->
-    <link rel="stylesheet" href="style.css?v=1.1.2">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -115,12 +115,12 @@
 
         <div class="about-card glass" data-aos="fade-up" data-aos-delay="100">
             <div class="about-text">
-                <h3 class="about-highlight">Hi, I’m a Self-Taught Web Developer</h3>
+                <h3 class="about-highlight">Hi, I'm a Self-Taught Web Developer</h3>
                 <p>
                     Focused on building clean, useful, and meaningful digital products. I enjoy turning ideas into real, functional experiences.
                 </p>
                 <p>
-                    From simple concepts to working applications, I explore problems, learn what’s needed, and build solutions step by step. My process is driven by curiosity, consistency, and a strong focus on improvement.
+                    From simple concepts to working applications, I explore problems, learn what's needed, and build solutions step by step. My process is driven by curiosity, consistency, and a strong focus on improvement.
                 </p>
                 <p>
                     I work mainly with web technologies and continuously grow through hands-on projects, experimentation, and self-learning. Every project I build is a reflection of learning in action — simple, practical, and purpose-driven.
@@ -218,8 +218,32 @@
         </div>
 
         <div class="projects-grid">
-            <!-- Project 1: WafyDev -->
+            <!-- Project 1: WafyURL - Premium URL Shortener -->
             <div class="project-card glass" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-icon-wrapper">
+                    <i class="fas fa-link project-icon"></i>
+                </div>
+                <h3 class="project-title">WafyURL - Premium URL Shortener</h3>
+                <p class="project-description">
+                    A premium full-stack link management platform built to instantly shorten URLs. Features a sleek cyberpunk neon UI, dynamic QR code generator with built-in download options, and a real-time link analytics dashboard—all optimized with flawless edge-case validation.
+                </p>
+                
+                <div class="project-tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/afeemuhammodwafy1/wafyurl" target="_blank" rel="noopener noreferrer" class="proj-link secondary"><i class="fa-brands fa-github"></i> Source Code</a>
+                    <a href="https://wafyurl.onrender.com/" target="_blank" rel="noopener noreferrer" class="proj-link primary">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 2: WafyDev -->
+            <div class="project-card glass" data-aos="fade-up" data-aos-delay="200">
                 <div class="project-icon-wrapper">
                     <i class="fa-solid fa-terminal project-icon"></i>
                 </div>
@@ -241,8 +265,8 @@
                 </div>
             </div>
 
-            <!-- Project 2: WafyDocs -->
-            <div class="project-card glass" data-aos="fade-up" data-aos-delay="200">
+            <!-- Project 3: WafyDocs (Will auto-move to next row) -->
+            <div class="project-card glass" data-aos="fade-up" data-aos-delay="300">
                 <div class="project-icon-wrapper">
                     <i class="fa-solid fa-copy project-icon"></i>
                 </div>
@@ -462,11 +486,11 @@
 
             if (!isDeleting && charIdx === currentPhrase.length) {
                 isDeleting = true;
-                typingSpeed = 2000; // Pause at end of text
+                typingSpeed = 2000;
             } else if (isDeleting && charIdx === 0) {
                 isDeleting = false;
                 phraseIdx = (phraseIdx + 1) % phrases.length;
-                typingSpeed = 500; // Pause before typing next word
+                typingSpeed = 500;
             }
 
             setTimeout(typeLoop, typingSpeed);
