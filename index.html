@@ -43,7 +43,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome 6.5+ (supports X/Twitter icon) -->
+    <!-- Font Awesome 6.5+ -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Custom CSS -->
@@ -86,8 +86,8 @@
         </nav>
 
         <div class="sidebar-footer">
-            <a href="cv.pdf" download class="sidebar-resume">
-                <i class="fa-solid fa-file-pdf"></i>
+            <a href="cv.pdf" download="Afee_Muhammod_Wafy_Resume.pdf" class="sidebar-resume" id="sidebarResume">
+                <i class="fa-solid fa-file-lines"></i>
                 <span>Resume</span>
             </a>
         </div>
@@ -123,8 +123,8 @@
         <a href="#certifications" class="mobile-nav-link" data-section="certifications">
             <i class="fa-solid fa-certificate"></i> Certifications
         </a>
-        <a href="cv.pdf" download class="mobile-nav-link resume-mobile">
-            <i class="fa-solid fa-file-pdf"></i> Resume
+        <a href="cv.pdf" download="Afee_Muhammod_Wafy_Resume.pdf" class="mobile-nav-link resume-mobile" id="mobileResume">
+            <i class="fa-solid fa-file-lines"></i> Resume
         </a>
     </div>
 
@@ -448,9 +448,9 @@
         <i class="fa-solid fa-chevron-up"></i>
     </button>
 
-    <!-- Custom JS -->
+    <!-- ✦ ALL JAVASCRIPT ✦ -->
     <script>
-        // ─── Mobile Menu ───
+        // 1. MOBILE MENU TOGGLE
         const menuBtn = document.getElementById('menuBtn');
         const mobileNav = document.getElementById('mobileNav');
 
@@ -466,7 +466,7 @@
             });
         });
 
-        // ─── Role Typing ───
+        // 2. TYPING EFFECT FOR ROLE
         const roles = ["Science Student", "Cybersecurity Enthusiast", "Front-End Developer", "AI & Tech Explorer"];
         let roleIndex = 0, charIndex = 0, isDeleting = false;
         const roleEl = document.getElementById('roleText');
@@ -495,7 +495,7 @@
         }
         typeRole();
 
-        // ─── Active Nav Link ───
+        // 3. ACTIVE NAV LINK ON SCROLL
         const sections = document.querySelectorAll('.section');
         const navLinks = document.querySelectorAll('.nav-link');
         const mobileLinks = document.querySelectorAll('.mobile-nav-link');
@@ -514,7 +514,7 @@
             setActive(current);
         });
 
-        // ─── Back to Top ───
+        // 4. BACK TO TOP BUTTON
         const backTop = document.getElementById('backTop');
         window.addEventListener('scroll', () => {
             backTop.classList.toggle('visible', window.scrollY > 400);
@@ -523,14 +523,73 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // ─── Smooth Scroll for Nav ───
+        // 5. SMOOTH SCROLL FOR NAV LINKS
         document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
             link.addEventListener('click', (e) => {
+                if (link.hasAttribute('download')) return;
                 e.preventDefault();
                 const target = document.querySelector(link.getAttribute('href'));
                 if (target) target.scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        // 6. RESUME DOWNLOAD FIX FOR MOBILE
+        function forceDownload(url, fileName) {
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            
+            setTimeout(() => {
+                document.body.removeChild(link);
+            }, 100);
+            
+            setTimeout(() => {
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) throw new Error('Network response was not ok');
+                        return response.blob();
+                    })
+                    .then(blob => {
+                        const blobUrl = URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = blobUrl;
+                        a.download = fileName;
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                        URL.revokeObjectURL(blobUrl);
+                    })
+                    .catch(() => {
+                        window.open(url, '_blank');
+                    });
+            }, 200);
+        }
+
+        const sidebarResume = document.getElementById('sidebarResume');
+        if (sidebarResume) {
+            sidebarResume.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const url = this.getAttribute('href');
+                const fileName = this.getAttribute('download') || 'Resume.pdf';
+                forceDownload(url, fileName);
+            });
+        }
+
+        const mobileResume = document.getElementById('mobileResume');
+        if (mobileResume) {
+            mobileResume.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const url = this.getAttribute('href');
+                const fileName = this.getAttribute('download') || 'Resume.pdf';
+                forceDownload(url, fileName);
+            });
+        }
+
+        console.log('✅ WAFY Portfolio Loaded Successfully!');
     </script>
 </body>
 </html>
