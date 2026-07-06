@@ -533,62 +533,6 @@
             });
         });
 
-        // 6. RESUME DOWNLOAD FIX FOR MOBILE
-        function forceDownload(url, fileName) {
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = fileName;
-            document.body.appendChild(link);
-            link.click();
-            
-            setTimeout(() => {
-                document.body.removeChild(link);
-            }, 100);
-            
-            setTimeout(() => {
-                fetch(url)
-                    .then(response => {
-                        if (!response.ok) throw new Error('Network response was not ok');
-                        return response.blob();
-                    })
-                    .then(blob => {
-                        const blobUrl = URL.createObjectURL(blob);
-                        const a = document.createElement('a');
-                        a.href = blobUrl;
-                        a.download = fileName;
-                        document.body.appendChild(a);
-                        a.click();
-                        document.body.removeChild(a);
-                        URL.revokeObjectURL(blobUrl);
-                    })
-                    .catch(() => {
-                        window.open(url, '_blank');
-                    });
-            }, 200);
-        }
-
-        const sidebarResume = document.getElementById('sidebarResume');
-        if (sidebarResume) {
-            sidebarResume.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                const url = this.getAttribute('href');
-                const fileName = this.getAttribute('download') || 'Resume.pdf';
-                forceDownload(url, fileName);
-            });
-        }
-
-        const mobileResume = document.getElementById('mobileResume');
-        if (mobileResume) {
-            mobileResume.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                const url = this.getAttribute('href');
-                const fileName = this.getAttribute('download') || 'Resume.pdf';
-                forceDownload(url, fileName);
-            });
-        }
-
         console.log('✅ WAFY Portfolio Loaded Successfully!');
     </script>
 </body>
