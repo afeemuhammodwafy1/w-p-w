@@ -1,632 +1,1423 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ============ PRIMARY META ============ -->
-    <title>Afee Muhammod Wafy</title>
-    <meta name="description" content="Portfolio of Afee Muhammod Wafy – Science student, front-end developer, cybersecurity enthusiast, and AI explorer. Building clean, functional digital products.">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    <link rel="canonical" href="https://www.amwafy.xyz/">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta name="theme-color" content="#0b0d15">
-    <meta name="color-scheme" content="dark">
-    <meta name="author" content="Afee Muhammod Wafy">
-
-    <!-- ============ SOCIAL & OPEN GRAPH ============ -->
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://www.amwafy.xyz/">
-    <meta property="og:title" content="Afee Muhammod Wafy">
-    <meta property="og:description" content="Portfolio of Afee Muhammod Wafy – Science student, front-end developer, cybersecurity enthusiast, and AI explorer.">
-    <meta property="og:image" content="https://www.amwafy.xyz/images/og-image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Afee Muhammod Wafy - Developer Portfolio">
-    <meta property="og:site_name" content="Afee Muhammod Wafy">
-    <meta property="og:locale" content="en_US">
-
-    <!-- ============ TWITTER CARDS ============ -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.amwafy.xyz/">
-    <meta name="twitter:title" content="Afee Muhammod Wafy">
-    <meta name="twitter:description" content="Portfolio of Afee Muhammod Wafy – Science student, front-end developer, cybersecurity enthusiast, and AI explorer.">
-    <meta name="twitter:image" content="https://www.amwafy.xyz/images/og-image.jpg">
-    <meta name="twitter:image:alt" content="Afee Muhammod Wafy - Developer Portfolio">
-    <meta name="twitter:site" content="@muhammodwafy">
-
-    <!-- ============ APPLE / MICROSOFT ============ -->
-    <meta name="apple-mobile-web-app-title" content="WAFY">
-    <meta name="application-name" content="Afee Muhammod Wafy">
-
-    <!-- ============ FAVICONS ============ -->
-    <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icon.png">
-    <link rel="apple-touch-icon" href="icon.png">
-
-    <!-- ============ DNS / PRECONNECT / PRELOAD ============ -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
-    <!-- ============ FONTS ============ -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
-
-    <!-- ============ FONT AWESOME ============ -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <!-- ============ STYLESHEET ============ -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- ============ SCHEMA.ORG STRUCTURED DATA ============ -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Afee Muhammod Wafy",
-      "alternateName": "WAFY",
-      "url": "https://www.amwafy.xyz/",
-      "email": "afeemuhammodwafy@yahoo.com",
-      "jobTitle": "Front-End Developer & Cybersecurity Enthusiast",
-      "image": "https://www.amwafy.xyz/images/og-image.jpg",
-      "sameAs": [
-        "https://github.com/afeemuhammodwafy1",
-        "https://linkedin.com/in/afeemuhammodwafy1",
-        "https://twitter.com/muhammodwafy",
-        "https://instagram.com/afeemuhammodwafy",
-        "https://facebook.com/afeemuhammodwafy"
-      ]
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afee Muhammod Wafy</title>
+  <meta name="description" content="Portfolio of Afee Muhammod Wafy – Science student, front-end developer, cybersecurity enthusiast, and AI explorer." />
+  <link rel="icon" type="image/png" sizes="32x32" href="icon.png" />
+  <link rel="apple-touch-icon" href="icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* ═══════════════════════════════════════
+       ROOT VARIABLES - Minimal Dark Theme
+       ═══════════════════════════════════════ */
+    :root {
+      --bg-primary: #0d0d0d;
+      --bg-secondary: #141414;
+      --bg-card: #1a1a1a;
+      --bg-card-hover: #222222;
+      --bg-elevated: #242424;
+      --text-primary: #f0f0f0;
+      --text-secondary: #a8a8a8;
+      --text-muted: #6a6a6a;
+      --text-light: #d0d0d0;
+      --accent: #8a8a8a;
+      --accent-hover: #b0b0b0;
+      --accent-subtle: #2a2a2a;
+      --border: rgba(255, 255, 255, 0.04);
+      --border-hover: rgba(255, 255, 255, 0.08);
+      --radius: 12px;
+      --transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      --font: 'Space Grotesk', sans-serif;
+      --sidebar-width: 76px;
     }
-    </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Afee Muhammod Wafy",
-      "alternateName": "WAFY",
-      "url": "https://www.amwafy.xyz/",
-      "description": "Portfolio of Afee Muhammod Wafy – Science student, front-end developer, cybersecurity explorer and AI enthusiast.",
-      "inLanguage": "en",
-      "isFamilyFriendly": true
+    /* ═══════════════════════════════════════
+       RESET & BASE
+       ═══════════════════════════════════════ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    </script>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font);
+      line-height: 1.7;
+      display: flex;
+    }
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfilePage",
-      "name": "Afee Muhammod Wafy · Portfolio",
-      "url": "https://www.amwafy.xyz/",
-      "description": "Personal portfolio and project showcase of Afee Muhammod Wafy – front-end developer, security student and AI explorer.",
-      "about": {
-        "@type": "Person",
-        "name": "Afee Muhammod Wafy"
-      },
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.amwafy.xyz/#home" },
-          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.amwafy.xyz/#about" },
-          { "@type": "ListItem", "position": 3, "name": "Skills", "item": "https://www.amwafy.xyz/#skills" },
-          { "@type": "ListItem", "position": 4, "name": "Projects", "item": "https://www.amwafy.xyz/#projects" },
-          { "@type": "ListItem", "position": 5, "name": "Education", "item": "https://www.amwafy.xyz/#education" },
-          { "@type": "ListItem", "position": 6, "name": "Certifications", "item": "https://www.amwafy.xyz/#certifications" }
-        ]
+    /* ═══════════════════════════════════════
+       SCROLLBAR
+       ═══════════════════════════════════════ */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-primary);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      border-radius: 10px;
+    }
+
+    /* ═══════════════════════════════════════
+       SIDEBAR
+       ═══════════════════════════════════════ */
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: var(--sidebar-width);
+      height: 100vh;
+      background: var(--bg-secondary);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0;
+      z-index: 100;
+    }
+    .sidebar-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .brand-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--text-primary);
+      opacity: 0.6;
+    }
+    .brand-text {
+      font-size: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      color: var(--text-muted);
+    }
+    .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .nav-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      padding: 10px 6px;
+      border-radius: 10px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.45rem;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+      letter-spacing: 0.5px;
+    }
+    .nav-link i {
+      font-size: 1.1rem;
+      margin-bottom: 2px;
+    }
+    .nav-link:hover {
+      color: var(--text-secondary);
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .nav-link.active {
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .nav-link.active::before {
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2px;
+      height: 20px;
+      border-radius: 0 2px 2px 0;
+      background: var(--text-primary);
+      opacity: 0.5;
+    }
+    .sidebar-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .sidebar-resume {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      padding: 10px 6px;
+      border-radius: 10px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.45rem;
+      font-weight: 500;
+      transition: var(--transition);
+      letter-spacing: 0.5px;
+    }
+    .sidebar-resume i {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+    }
+    .sidebar-resume:hover {
+      color: var(--text-secondary);
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .sidebar-resume span {
+      font-size: 0.45rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* ═══════════════════════════════════════
+       MOBILE HEADER & NAV
+       ═══════════════════════════════════════ */
+    .mobile-header {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 90;
+      padding: 14px 20px;
+      background: rgba(13, 13, 13, 0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      justify-content: space-between;
+      align-items: center;
+    }
+    .mobile-brand {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      color: var(--text-primary);
+    }
+    .mobile-menu-btn {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .mobile-menu-btn span {
+      width: 22px;
+      height: 1.5px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .mobile-menu-btn.active span:nth-child(1) {
+      transform: rotate(45deg) translate(4px, 4px);
+    }
+    .mobile-menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .mobile-menu-btn.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(4px, -4px);
+    }
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 58px;
+      left: 0;
+      right: 0;
+      z-index: 89;
+      background: rgba(13, 13, 13, 0.98);
+      backdrop-filter: blur(16px);
+      padding: 16px 20px 20px;
+      border-bottom: 1px solid var(--border);
+      flex-direction: column;
+      gap: 2px;
+      transform: translateY(-8px);
+      opacity: 0;
+      transition: var(--transition);
+      pointer-events: none;
+    }
+    .mobile-nav.active {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+    .mobile-nav-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+    .mobile-nav-link i {
+      width: 18px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active {
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-primary);
+    }
+    .mobile-nav-link.active i {
+      color: var(--text-primary);
+    }
+    .resume-mobile {
+      margin-top: 6px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      color: var(--text-light);
+    }
+    .resume-mobile i {
+      color: var(--text-secondary) !important;
+    }
+    .resume-mobile span {
+      font-size: 0.9rem;
+    }
+
+    /* ═══════════════════════════════════════
+       MAIN CONTENT
+       ═══════════════════════════════════════ */
+    .main-content {
+      margin-left: var(--sidebar-width);
+      flex: 1;
+      min-height: 100vh;
+    }
+
+    /* ═══════════════════════════════════════
+       SECTIONS
+       ═══════════════════════════════════════ */
+    .section {
+      padding: 80px 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .section-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .section-title {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 44px;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+
+    /* ═══════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════ */
+    .hero {
+      padding-top: 100px;
+      padding-bottom: 60px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero-content-center {
+      max-width: 780px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+      background: rgba(255, 255, 255, 0.02);
+      padding: 5px 14px 5px 10px;
+      border-radius: 50px;
+      border: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      display: inline-block;
+      box-shadow: 0 0 12px rgba(34, 197, 94, 0.6);
+      animation: pulse-green 2s ease-in-out infinite;
+    }
+    @keyframes pulse-green {
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 12px rgba(34, 197, 94, 0.6);
+      }
+      50% {
+        opacity: 0.7;
+        transform: scale(1.2);
+        box-shadow: 0 0 24px rgba(34, 197, 94, 0.3);
       }
     }
-    </script>
+    .hero-name {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 14px;
+      color: var(--text-primary);
+    }
+    .hero-role {
+      font-size: 1.3rem;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+    }
+    .role-bracket {
+      color: var(--text-muted);
+    }
+    .role-text {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    .hero-desc {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      max-width: 580px;
+      margin: 0 auto 30px;
+      line-height: 1.8;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 36px;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 30px;
+      background: var(--text-primary);
+      color: var(--bg-primary);
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      opacity: 0.85;
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      padding: 13px 30px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: var(--transition);
+    }
+    .btn-secondary:hover {
+      border-color: var(--text-muted);
+      color: var(--text-primary);
+    }
+    .hero-social {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+    .hero-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: var(--transition);
+      font-size: 1rem;
+    }
+    .hero-social a:hover {
+      border-color: var(--text-muted);
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.02);
+      transform: translateY(-2px);
+    }
+    .scroll-indicator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      color: var(--text-muted);
+      font-size: 0.6rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 36px;
+      animation: bounce-down 2.5s ease-in-out infinite;
+      opacity: 0.5;
+    }
+    .scroll-indicator i {
+      font-size: 0.7rem;
+    }
+    @keyframes bounce-down {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(5px);
+      }
+    }
+
+    /* ═══════════════════════════════════════
+       ABOUT
+       ═══════════════════════════════════════ */
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 44px;
+    }
+    .about-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: var(--transition);
+    }
+    .about-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-3px);
+      background: var(--bg-card-hover);
+    }
+    .about-icon {
+      font-size: 1.4rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .about-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-primary);
+    }
+    .about-card p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+    .about-quote-block {
+      text-align: center;
+      padding: 36px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.01);
+    }
+    .about-quote-block i {
+      font-size: 1.4rem;
+      color: var(--text-muted);
+      opacity: 0.3;
+      margin-bottom: 6px;
+    }
+    .about-quote-block p {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: -0.01em;
+    }
+
+    /* ═══════════════════════════════════════
+       SKILLS
+       ═══════════════════════════════════════ */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .skill-group {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      transition: var(--transition);
+    }
+    .skill-group:hover {
+      border-color: var(--border-hover);
+      background: var(--bg-card-hover);
+    }
+    .skill-group-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .skill-group-header i {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+    .skill-group-header h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .skill-tags span {
+      font-size: 0.7rem;
+      padding: 3px 12px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+    .skill-tags span:hover {
+      border-color: var(--text-muted);
+      color: var(--text-primary);
+    }
+
+    /* ═══════════════════════════════════════
+       PROJECTS – FILTER + CARDS
+       ═══════════════════════════════════════ */
+
+    /* ─── Filter Bar ─── */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 32px;    /* ← explicit gap between filters & cards */
+    }
+    .filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-family: var(--font);
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+      letter-spacing: 0.3px;
+    }
+    .filter-btn:hover {
+      border-color: var(--border-hover);
+      color: var(--text-primary);
+      background: var(--bg-card-hover);
+    }
+    .filter-btn.active {
+      background: var(--text-primary);
+      color: var(--bg-primary);
+      border-color: var(--text-primary);
+    }
+
+    /* ─── Projects Grid ─── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.25s ease, transform 0.25s ease, border-color 0.2s, background 0.2s;
+    }
+    .project-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-3px);
+      background: var(--bg-card-hover);
+    }
+    .project-card[style*="display: none"] {
+      opacity: 0;
+      transform: scale(0.96);
+      pointer-events: none;
+    }
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+    .project-icon {
+      font-size: 1.4rem;
+      color: var(--text-muted);
+    }
+    .project-links-top {
+      display: flex;
+      gap: 10px;
+    }
+    .project-links-top a {
+      color: var(--text-muted);
+      transition: var(--transition);
+      font-size: 0.85rem;
+    }
+    .project-links-top a:hover {
+      color: var(--text-primary);
+    }
+    .project-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-primary);
+    }
+    .project-desc {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      line-height: 1.7;
+      flex-grow: 1;
+      margin-bottom: 14px;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .project-tags span {
+      font-size: 0.6rem;
+      padding: 2px 10px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      color: var(--text-muted);
+    }
+
+    /* ═══════════════════════════════════════
+       EDUCATION
+       ═══════════════════════════════════════ */
+    .edu-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .edu-item {
+      display: flex;
+      gap: 20px;
+      position: relative;
+    }
+    .edu-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 26px;
+      bottom: -24px;
+      width: 1px;
+      background: var(--border);
+    }
+    .edu-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--text-muted);
+      flex-shrink: 0;
+      margin-top: 4px;
+      position: relative;
+      z-index: 1;
+    }
+    .edu-content {
+      flex: 1;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      transition: var(--transition);
+    }
+    .edu-content:hover {
+      border-color: var(--border-hover);
+    }
+    .edu-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+    }
+    .edu-year {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .edu-badge {
+      font-size: 0.6rem;
+      padding: 2px 12px;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+    }
+    .edu-badge.done {
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+    }
+    .edu-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+      color: var(--text-primary);
+    }
+    .edu-meta {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      margin-bottom: 6px;
+    }
+    .edu-desc {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      line-height: 1.7;
+    }
+
+    /* ═══════════════════════════════════════
+       CERTIFICATIONS
+       ═══════════════════════════════════════ */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .cert-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .cert-item:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-3px);
+      background: var(--bg-card-hover);
+    }
+    .cert-icon {
+      font-size: 1.6rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .cert-item h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+      color: var(--text-primary);
+    }
+    .cert-item p {
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      margin-bottom: 12px;
+    }
+    .cert-item a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 500;
+      transition: var(--transition);
+      border-bottom: 1px solid transparent;
+    }
+    .cert-item a:hover {
+      border-bottom-color: var(--text-secondary);
+      color: var(--text-primary);
+    }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════ */
+    .footer {
+      padding: 80px 60px 40px;
+      border-top: 1px solid var(--border);
+    }
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .footer-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+    .footer-desc {
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+      font-size: 1rem;
+    }
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    .footer-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .footer-social a:hover {
+      border-color: var(--text-muted);
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.02);
+      transform: translateY(-2px);
+    }
+    .footer-divider {
+      width: 100%;
+      max-width: 200px;
+      height: 1px;
+      background: var(--border);
+      margin: 0 auto 24px;
+    }
+    .copyright {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.3px;
+    }
+
+    /* ═══════════════════════════════════════
+       BACK TO TOP
+       ═══════════════════════════════════════ */
+    .back-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: var(--transition);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 50;
+    }
+    .back-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    .back-top:hover {
+      border-color: var(--text-muted);
+      color: var(--text-primary);
+      transform: translateY(-2px);
+    }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .hero-name {
+        font-size: 3rem;
+      }
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+      .main-content {
+        margin-left: 0;
+      }
+      .mobile-header {
+        display: flex;
+      }
+      .mobile-nav {
+        display: flex;
+      }
+      .section {
+        padding: 90px 20px 50px;
+        min-height: auto;
+      }
+      .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 28px;
+      }
+      .hero {
+        padding-top: 70px;
+        min-height: auto;
+      }
+      .hero-name {
+        font-size: 2.4rem;
+      }
+      .hero-role {
+        font-size: 1rem;
+      }
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+      .edu-content {
+        padding: 18px;
+      }
+      .edu-title {
+        font-size: 0.95rem;
+      }
+      .footer {
+        padding: 50px 20px 28px;
+      }
+      .footer-title {
+        font-size: 1.5rem;
+      }
+      .back-top {
+        bottom: 18px;
+        right: 18px;
+        width: 36px;
+        height: 36px;
+      }
+      .scroll-indicator {
+        display: none;
+      }
+      .filter-bar {
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+      .filter-btn {
+        font-size: 0.7rem;
+        padding: 6px 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-name {
+        font-size: 1.8rem;
+      }
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+      .section-title {
+        font-size: 1.4rem;
+      }
+      .about-card {
+        padding: 20px 16px;
+      }
+      .skill-group {
+        padding: 18px 16px;
+      }
+      .project-card {
+        padding: 18px 16px;
+      }
+      .cert-item {
+        padding: 18px 16px;
+      }
+      .edu-content {
+        padding: 14px;
+      }
+      .filter-bar {
+        gap: 6px;
+        margin-bottom: 20px;
+      }
+      .filter-btn {
+        font-size: 0.65rem;
+        padding: 5px 12px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- ============ SIDEBAR ============ -->
-    <aside class="sidebar" role="navigation" aria-label="Main navigation">
-        <div class="sidebar-brand">
-            <span class="brand-dot" aria-hidden="true"></span>
-            <span class="brand-text">WAFY</span>
-        </div>
-
-        <nav class="sidebar-nav" role="menubar">
-            <a href="#home" class="nav-link active" data-section="home" role="menuitem" aria-current="page">
-                <i class="fa-solid fa-house" aria-hidden="true"></i>
-                <span>Home</span>
-            </a>
-            <a href="#about" class="nav-link" data-section="about" role="menuitem">
-                <i class="fa-solid fa-user" aria-hidden="true"></i>
-                <span>About</span>
-            </a>
-            <a href="#skills" class="nav-link" data-section="skills" role="menuitem">
-                <i class="fa-solid fa-code" aria-hidden="true"></i>
-                <span>Skills</span>
-            </a>
-            <a href="#projects" class="nav-link" data-section="projects" role="menuitem">
-                <i class="fa-solid fa-folder-open" aria-hidden="true"></i>
-                <span>Projects</span>
-            </a>
-            <a href="#education" class="nav-link" data-section="education" role="menuitem">
-                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
-                <span>Education</span>
-            </a>
-            <a href="#certifications" class="nav-link" data-section="certifications" role="menuitem">
-                <i class="fa-solid fa-certificate" aria-hidden="true"></i>
-                <span>Certifications</span>
-            </a>
-        </nav>
-
-        <div class="sidebar-footer">
-            <a href="cv.pdf" download="Afee_Muhammod_Wafy_Resume.pdf" class="sidebar-resume" id="sidebarResume" aria-label="Download resume (PDF)">
-                <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
-                <span>Resume</span>
-            </a>
-        </div>
-    </aside>
-
-    <!-- ============ MOBILE HEADER ============ -->
-    <header class="mobile-header" role="banner">
-        <span class="mobile-brand">WAFY</span>
-        <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header>
-
-    <!-- ============ MOBILE NAV ============ -->
-    <div class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile navigation">
-        <a href="#home" class="mobile-nav-link active" data-section="home" aria-current="page">
-            <i class="fa-solid fa-house" aria-hidden="true"></i> Home
-        </a>
-        <a href="#about" class="mobile-nav-link" data-section="about">
-            <i class="fa-solid fa-user" aria-hidden="true"></i> About
-        </a>
-        <a href="#skills" class="mobile-nav-link" data-section="skills">
-            <i class="fa-solid fa-code" aria-hidden="true"></i> Skills
-        </a>
-        <a href="#projects" class="mobile-nav-link" data-section="projects">
-            <i class="fa-solid fa-folder-open" aria-hidden="true"></i> Projects
-        </a>
-        <a href="#education" class="mobile-nav-link" data-section="education">
-            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education
-        </a>
-        <a href="#certifications" class="mobile-nav-link" data-section="certifications">
-            <i class="fa-solid fa-certificate" aria-hidden="true"></i> Certifications
-        </a>
-        <a href="cv.pdf" download="Afee_Muhammod_Wafy_Resume.pdf" class="mobile-nav-link resume-mobile" id="mobileResume">
-            <i class="fa-solid fa-file-lines" aria-hidden="true"></i> Resume
-        </a>
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar" role="navigation" aria-label="Main navigation">
+    <div class="sidebar-brand">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span class="brand-text">WAFY</span>
     </div>
+    <nav class="sidebar-nav" role="menubar">
+      <a href="#home" class="nav-link active" data-section="home" role="menuitem" aria-current="page"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Home</span></a>
+      <a href="#about" class="nav-link" data-section="about" role="menuitem"><i class="fa-solid fa-user" aria-hidden="true"></i><span>About</span></a>
+      <a href="#skills" class="nav-link" data-section="skills" role="menuitem"><i class="fa-solid fa-code" aria-hidden="true"></i><span>Skills</span></a>
+      <a href="#projects" class="nav-link" data-section="projects" role="menuitem"><i class="fa-solid fa-folder-open" aria-hidden="true"></i><span>Projects</span></a>
+      <a href="#education" class="nav-link" data-section="education" role="menuitem"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i><span>Education</span></a>
+      <a href="#certifications" class="nav-link" data-section="certifications" role="menuitem"><i class="fa-solid fa-certificate" aria-hidden="true"></i><span>Certifications</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="cv.pdf" download="Afee_Muhammod_Wafy_Resume.pdf" class="sidebar-resume" id="sidebarResume" aria-label="Download resume (PDF)">
+        <i class="fa-solid fa-file-lines" aria-hidden="true"></i><span>Resume</span>
+      </a>
+    </div>
+  </aside>
 
-    <!-- ============ MAIN CONTENT ============ -->
-    <main class="main-content" id="main-content" role="main">
-
-        <!-- ═══ HERO ═══ -->
-        <section id="home" class="section hero" aria-labelledby="hero-title">
-            <div class="hero-content-center">
-                <div class="hero-tag">
-                    <span class="pulse-dot" aria-hidden="true"></span>
-                    Available
-                </div>
-                <h1 class="hero-name" id="hero-title">
-                    Afee Muhammod Wafy
-                </h1>
-                <div class="hero-role">
-                    <span class="role-bracket" aria-hidden="true">⟨</span>
-                    <span class="role-text" id="roleText">Front-End Developer</span>
-                    <span class="role-bracket" aria-hidden="true">⟩</span>
-                </div>
-                <p class="hero-desc">
-                    Building foundation in computer systems, modern web development,
-                    and defensive security. Currently pursuing Science with a focus
-                    on practical applications.
-                </p>
-                <div class="hero-actions">
-                    <a href="#projects" class="btn-primary" aria-label="View my projects">
-                        View My Work
-                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                    </a>
-                    <a href="#footer" class="btn-secondary" aria-label="Scroll to contact section">
-                        Let's Connect
-                    </a>
-                </div>
-                <div class="hero-social" aria-label="Social media links">
-                    <a href="https://github.com/afeemuhammodwafy1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://linkedin.com/in/afeemuhammodwafy1" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/8801644568471" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://twitter.com/muhammodwafy" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="mailto:afeemuhammodwafy@yahoo.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                </div>
-            </div>
-            <div class="scroll-indicator" aria-hidden="true">
-                <span>Scroll</span>
-                <i class="fa-solid fa-chevron-down"></i>
-            </div>
-        </section>
-
-        <!-- ═══ ABOUT ═══ -->
-        <section id="about" class="section" aria-labelledby="about-title">
-            <div class="section-label">About</div>
-            <h2 class="section-title" id="about-title">Who I Am</h2>
-
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="about-icon" aria-hidden="true"><i class="fa-solid fa-flag"></i></div>
-                    <h3>Mission</h3>
-                    <p>Building clean, useful, and meaningful digital products. I enjoy turning ideas into real, functional experiences.</p>
-                </div>
-                <div class="about-card">
-                    <div class="about-icon" aria-hidden="true"><i class="fa-solid fa-compass"></i></div>
-                    <h3>Approach</h3>
-                    <p>From simple concepts to working applications, I explore problems, learn what's needed, and build solutions step by step.</p>
-                </div>
-                <div class="about-card">
-                    <div class="about-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></div>
-                    <h3>Philosophy</h3>
-                    <p>Driven by curiosity, consistency, and a strong focus on improvement. Every project reflects learning in action.</p>
-                </div>
-            </div>
-
-            <div class="about-quote-block">
-                <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
-                <p>"Building things that make ideas real."</p>
-            </div>
-        </section>
-
-        <!-- ═══ SKILLS ═══ -->
-        <section id="skills" class="section" aria-labelledby="skills-title">
-            <div class="section-label">Skills</div>
-            <h2 class="section-title" id="skills-title">My Arsenal</h2>
-
-            <div class="skills-grid">
-                <div class="skill-group">
-                    <div class="skill-group-header">
-                        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
-                        <h3>Security & Networking</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span>Network Basics</span>
-                        <span>Defensive Security</span>
-                        <span>Encryption Concepts</span>
-                        <span>Vulnerability Analysis</span>
-                    </div>
-                </div>
-
-                <div class="skill-group">
-                    <div class="skill-group-header">
-                        <i class="fa-solid fa-code" aria-hidden="true"></i>
-                        <h3>Programming</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>Python Basics</span>
-                        <span>Git</span>
-                    </div>
-                </div>
-
-                <div class="skill-group">
-                    <div class="skill-group-header">
-                        <i class="fa-solid fa-brain" aria-hidden="true"></i>
-                        <h3>AI & Emerging Tech</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span>LLM Prompting</span>
-                        <span>AI Technologies</span>
-                        <span>Structured Data</span>
-                    </div>
-                </div>
-
-                <div class="skill-group">
-                    <div class="skill-group-header">
-                        <i class="fa-solid fa-palette" aria-hidden="true"></i>
-                        <h3>Design & Creativity</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span>UI/UX Layouts</span>
-                        <span>Canva Design</span>
-                        <span>Visual Design</span>
-                    </div>
-                </div>
-
-                <div class="skill-group">
-                    <div class="skill-group-header">
-                        <i class="fa-solid fa-tools" aria-hidden="true"></i>
-                        <h3>Tools & OS</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span>Linux</span>
-                        <span>VS Code</span>
-                        <span>GitHub</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ═══ PROJECTS ═══ -->
-        <section id="projects" class="section" aria-labelledby="projects-title">
-            <div class="section-label">Projects</div>
-            <h2 class="section-title" id="projects-title">What I've Built</h2>
-
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <article class="project-card">
-                    <div class="project-top">
-                        <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-link"></i></div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/afeemuhammodwafy1/wafyurl" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for WafyURL"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://wafyurl.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Live demo for WafyURL"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">WafyURL</h3>
-                    <p class="project-desc">Premium full-stack link management platform with QR code generator and real-time analytics dashboard.</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JS</span>
-                    </div>
-                </article>
-
-                <!-- Project 2 -->
-                <article class="project-card">
-                    <div class="project-top">
-                        <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-terminal"></i></div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/afeemuhammodwafy1/wafydev" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for WafyDev"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://afeemuhammodwafy1.github.io/wafydev/" target="_blank" rel="noopener noreferrer" aria-label="Live demo for WafyDev"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">WafyDev</h3>
-                    <p class="project-desc">Free suite of fast, secure web utilities including password generator, text tools, QR generator, and color palette.</p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JS</span>
-                    </div>
-                </article>
-
-                <!-- Project 3 -->
-                <article class="project-card">
-                    <div class="project-top">
-                        <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-copy"></i></div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/afeemuhammodwafy1/wafydocs" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for WafyDocs"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://afeemuhammodwafy1.github.io/wafydocs/" target="_blank" rel="noopener noreferrer" aria-label="Live demo for WafyDocs"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">WafyDocs</h3>
-                    <p class="project-desc">Lightweight tool to instantly convert Markdown content into professional PDF and text documents.</p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                    </div>
-                </article>
-
-                <!-- Project 4: AstroWafy -->
-                <article class="project-card">
-                    <div class="project-top">
-                        <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-rocket"></i></div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/afeemuhammodwafy1/astrowafy" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for AstroWafy"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://astro.amwafy.xyz/" target="_blank" rel="noopener noreferrer" aria-label="Live demo for AstroWafy"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">AstroWafy</h3>
-                    <p class="project-desc">Automated web application that connects directly with NASA's APOD (Astronomy Picture of the Day) API to bring the wonders of the cosmos to users in real-time, featuring daily updated space imagery and comprehensive astronomical data.</p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JS</span>
-                        <span>NASA APOD API</span>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- ═══ EDUCATION ═══ -->
-        <section id="education" class="section" aria-labelledby="education-title">
-            <div class="section-label">Education</div>
-            <h2 class="section-title" id="education-title">Academic Journey</h2>
-
-            <div class="edu-timeline">
-                <div class="edu-item">
-                    <div class="edu-dot" aria-hidden="true"></div>
-                    <div class="edu-content">
-                        <div class="edu-header">
-                            <span class="edu-year">2024 — Present</span>
-                            <span class="edu-badge">Current</span>
-                        </div>
-                        <h3 class="edu-title">Higher Secondary Certificate (HSC)</h3>
-                        <p class="edu-meta">Science</p>
-                        <p class="edu-desc">Concentrating on foundational science and mathematics electives, strengthening quantitative reasoning and logical analysis skills essential for higher computing studies.</p>
-                    </div>
-                </div>
-
-                <div class="edu-item">
-                    <div class="edu-dot" aria-hidden="true"></div>
-                    <div class="edu-content">
-                        <div class="edu-header">
-                            <span class="edu-year">2024</span>
-                            <span class="edu-badge done">Completed</span>
-                        </div>
-                        <h3 class="edu-title">Secondary School Certificate (SSC)</h3>
-                        <p class="edu-meta">Science</p>
-                        <p class="edu-desc">Completed secondary science curriculum with balanced performance, establishing foundational knowledge in physics, chemistry, mathematics, and introductory computer technologies.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ═══ CERTIFICATIONS ═══ -->
-        <section id="certifications" class="section" aria-labelledby="cert-title">
-            <div class="section-label">Certifications</div>
-            <h2 class="section-title" id="cert-title">Validations</h2>
-
-            <div class="cert-grid">
-                <div class="cert-item">
-                    <div class="cert-icon" aria-hidden="true"><i class="fa-solid fa-microchip"></i></div>
-                    <h4>Digital Skills: AI</h4>
-                    <p>FutureLearn - Accenture</p>
-                    <a href="https://www.futurelearn.com/certificates/e6npdxg" target="_blank" rel="noopener noreferrer">Verify →</a>
-                </div>
-
-                <div class="cert-item">
-                    <div class="cert-icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h4>Intro to Cyber Security</h4>
-                    <p>FutureLearn - Open University</p>
-                    <a href="https://www.futurelearn.com/certificates/h6davat" target="_blank" rel="noopener noreferrer">Verify →</a>
-                </div>
-
-                <div class="cert-item">
-                    <div class="cert-icon" aria-hidden="true"><i class="fa-brands fa-python"></i></div>
-                    <h4>Basics of Python</h4>
-                    <p>UniAthena</p>
-                    <a href="https://uniathena.com/verify/certificate?certID=8781-9786-7632" target="_blank" rel="noopener noreferrer">Verify →</a>
-                </div>
-
-                <div class="cert-item">
-                    <div class="cert-icon" aria-hidden="true"><i class="fa-solid fa-palette"></i></div>
-                    <h4>Canva for Beginners</h4>
-                    <p>Simplilearn</p>
-                    <a href="https://simpli-web.app.link/e/DXiqi2ANM1b" target="_blank" rel="noopener noreferrer">Verify →</a>
-                </div>
-
-                <div class="cert-item">
-                    <div class="cert-icon" aria-hidden="true"><i class="fa-regular fa-file-excel"></i></div>
-                    <h4>Excel: Zero to Hero</h4>
-                    <p>Udemy</p>
-                    <a href="https://udemy.com/certificate/UC-04491d93-4e56-413d-9c41-da1642c5844d/" target="_blank" rel="noopener noreferrer">Verify →</a>
-                </div>
-
-                <div class="cert-item">
-                    <div class="cert-icon" aria-hidden="true"><i class="fa-brands fa-html5"></i></div>
-                    <h4>Introduction to HTML</h4>
-                    <p>Simplilearn</p>
-                    <a href="https://simpli-web.app.link/e/isp9CvQ6G1b" target="_blank" rel="noopener noreferrer">Verify →</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ═══ FOOTER ═══ -->
-        <footer id="footer" class="footer" role="contentinfo">
-            <div class="footer-content">
-                <h2 class="footer-title">Let's Connect</h2>
-                <p class="footer-desc">Feel free to reach out for collaborations, project sharing, or technical discussions.</p>
-
-                <div class="footer-social" aria-label="Social media links">
-                    <a href="https://github.com/afeemuhammodwafy1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://linkedin.com/in/afeemuhammodwafy1" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://twitter.com/muhammodwafy" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://instagram.com/afeemuhammodwafy" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://facebook.com/afeemuhammodwafy" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="mailto:afeemuhammodwafy@yahoo.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                </div>
-
-                <div class="footer-divider" aria-hidden="true"></div>
-                <p class="copyright">&copy; 2026 Wafy — Built with ❤️ &amp; passion for technology</p>
-            </div>
-        </footer>
-
-    </main>
-
-    <!-- ============ BACK TO TOP ============ -->
-    <button id="backTop" class="back-top" aria-label="Back to top">
-        <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+  <!-- ============ MOBILE HEADER ============ -->
+  <header class="mobile-header" role="banner">
+    <span class="mobile-brand">WAFY</span>
+    <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
     </button>
+  </header>
 
-    <!-- ============ JAVASCRIPT (unchanged) ============ -->
-    <script>
-        // 1. MOBILE MENU TOGGLE
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileNav = document.getElementById('mobileNav');
+  <!-- ============ MOBILE NAV ============ -->
+  <div class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile navigation">
+    <a href="#home" class="mobile-nav-link active" data-section="home" aria-current="page"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
+    <a href="#about" class="mobile-nav-link" data-section="about"><i class="fa-solid fa-user" aria-hidden="true"></i> About</a>
+    <a href="#skills" class="mobile-nav-link" data-section="skills"><i class="fa-solid fa-code" aria-hidden="true"></i> Skills</a>
+    <a href="#projects" class="mobile-nav-link" data-section="projects"><i class="fa-solid fa-folder-open" aria-hidden="true"></i> Projects</a>
+    <a href="#education" class="mobile-nav-link" data-section="education"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</a>
+    <a href="#certifications" class="mobile-nav-link" data-section="certifications"><i class="fa-solid fa-certificate" aria-hidden="true"></i> Certifications</a>
+    <a href="cv.pdf" download="Afee_Muhammod_Wafy_Resume.pdf" class="mobile-nav-link resume-mobile" id="mobileResume"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Resume</a>
+  </div>
 
-        menuBtn.addEventListener('click', () => {
-            const expanded = menuBtn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true';
-            menuBtn.setAttribute('aria-expanded', expanded);
-            menuBtn.classList.toggle('active');
-            mobileNav.classList.toggle('active');
-        });
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="main-content" id="main-content" role="main">
 
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                menuBtn.setAttribute('aria-expanded', 'false');
-                menuBtn.classList.remove('active');
-                mobileNav.classList.remove('active');
-            });
-        });
+    <!-- ═══ HERO ═══ -->
+    <section id="home" class="section hero" aria-labelledby="hero-title">
+      <div class="hero-content-center">
+        <div class="hero-tag"><span class="pulse-dot" aria-hidden="true"></span>Available</div>
+        <h1 class="hero-name" id="hero-title">Afee Muhammod Wafy</h1>
+        <div class="hero-role"><span class="role-bracket" aria-hidden="true">⟨</span><span class="role-text" id="roleText">Front-End Developer</span><span class="role-bracket" aria-hidden="true">⟩</span></div>
+        <p class="hero-desc">Building foundation in computer systems, modern web development, and defensive security. Currently pursuing Science with a focus on practical applications.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary" aria-label="View my projects">View My Work <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a href="#footer" class="btn-secondary" aria-label="Scroll to contact section">Let's Connect</a>
+        </div>
+        <div class="hero-social" aria-label="Social media links">
+          <a href="https://github.com/afeemuhammodwafy1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/afeemuhammodwafy1" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/8801644568471" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://twitter.com/muhammodwafy" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="mailto:afeemuhammodwafy@yahoo.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true"><span>Scroll</span><i class="fa-solid fa-chevron-down"></i></div>
+    </section>
 
-        // 2. TYPING EFFECT FOR ROLE
-        const roles = ["Science Student", "Cybersecurity Enthusiast", "Front-End Developer", "AI & Tech Explorer"];
-        let roleIndex = 0, charIndex = 0, isDeleting = false;
-        const roleEl = document.getElementById('roleText');
+    <!-- ═══ ABOUT ═══ -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="section-label">About</div>
+      <h2 class="section-title" id="about-title">Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-card"><div class="about-icon" aria-hidden="true"><i class="fa-solid fa-flag"></i></div><h3>Mission</h3><p>Building clean, useful, and meaningful digital products. I enjoy turning ideas into real, functional experiences.</p></div>
+        <div class="about-card"><div class="about-icon" aria-hidden="true"><i class="fa-solid fa-compass"></i></div><h3>Approach</h3><p>From simple concepts to working applications, I explore problems, learn what's needed, and build solutions step by step.</p></div>
+        <div class="about-card"><div class="about-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></div><h3>Philosophy</h3><p>Driven by curiosity, consistency, and a strong focus on improvement. Every project reflects learning in action.</p></div>
+      </div>
+      <div class="about-quote-block"><i class="fa-solid fa-quote-left" aria-hidden="true"></i><p>"Building things that make ideas real."</p></div>
+    </section>
 
-        function typeRole() {
-            const current = roles[roleIndex];
-            if (isDeleting) {
-                roleEl.textContent = current.slice(0, charIndex - 1);
-                charIndex--;
-            } else {
-                roleEl.textContent = current.slice(0, charIndex + 1);
-                charIndex++;
-            }
+    <!-- ═══ SKILLS ═══ -->
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <div class="section-label">Skills</div>
+      <h2 class="section-title" id="skills-title">My Arsenal</h2>
+      <div class="skills-grid">
+        <div class="skill-group"><div class="skill-group-header"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><h3>Security & Networking</h3></div><div class="skill-tags"><span>Network Basics</span><span>Defensive Security</span><span>Encryption Concepts</span><span>Vulnerability Analysis</span></div></div>
+        <div class="skill-group"><div class="skill-group-header"><i class="fa-solid fa-code" aria-hidden="true"></i><h3>Programming</h3></div><div class="skill-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Python Basics</span><span>Git</span></div></div>
+        <div class="skill-group"><div class="skill-group-header"><i class="fa-solid fa-brain" aria-hidden="true"></i><h3>AI & Emerging Tech</h3></div><div class="skill-tags"><span>LLM Prompting</span><span>AI Technologies</span><span>Structured Data</span></div></div>
+        <div class="skill-group"><div class="skill-group-header"><i class="fa-solid fa-palette" aria-hidden="true"></i><h3>Design & Creativity</h3></div><div class="skill-tags"><span>UI/UX Layouts</span><span>Canva Design</span><span>Visual Design</span></div></div>
+        <div class="skill-group"><div class="skill-group-header"><i class="fa-solid fa-tools" aria-hidden="true"></i><h3>Tools & OS</h3></div><div class="skill-tags"><span>Linux</span><span>VS Code</span><span>GitHub</span></div></div>
+      </div>
+    </section>
 
-            if (!isDeleting && charIndex === current.length) {
-                isDeleting = true;
-                setTimeout(typeRole, 2000);
-                return;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
-                setTimeout(typeRole, 300);
-                return;
-            }
-            setTimeout(typeRole, isDeleting ? 40 : 80);
+    <!-- ═══ PROJECTS ═══ -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="section-label">Projects</div>
+      <h2 class="section-title" id="projects-title">What I've Built</h2>
+
+      <!-- FILTER BUTTONS -->
+      <div class="filter-bar" role="group" aria-label="Filter projects by technology">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="python-flask">Python / Flask</button>
+        <button class="filter-btn" data-filter="javascript">JavaScript</button>
+        <button class="filter-btn" data-filter="html-css">HTML &amp; CSS</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- WafyURL: Python, Flask, HTML, CSS, JS -->
+        <article class="project-card" data-tags="python flask html css js">
+          <div class="project-top">
+            <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-link"></i></div>
+            <div class="project-links-top">
+              <a href="https://github.com/afeemuhammodwafy1/wafyurl" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://wafyurl.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">WafyURL</h3>
+          <p class="project-desc">Premium full-stack link management platform with QR code generator and real-time analytics dashboard.</p>
+          <div class="project-tags"><span>Python</span><span>Flask</span><span>HTML</span><span>CSS</span><span>JS</span></div>
+        </article>
+
+        <!-- WafyDev: HTML, CSS, JS -->
+        <article class="project-card" data-tags="html css js">
+          <div class="project-top">
+            <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-terminal"></i></div>
+            <div class="project-links-top">
+              <a href="https://github.com/afeemuhammodwafy1/wafydev" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://afeemuhammodwafy1.github.io/wafydev/" target="_blank" rel="noopener noreferrer" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">WafyDev</h3>
+          <p class="project-desc">Free suite of fast, secure web utilities including password generator, text tools, QR generator, and color palette.</p>
+          <div class="project-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        </article>
+
+        <!-- WafyDocs: HTML, CSS -->
+        <article class="project-card" data-tags="html css">
+          <div class="project-top">
+            <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-copy"></i></div>
+            <div class="project-links-top">
+              <a href="https://github.com/afeemuhammodwafy1/wafydocs" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://afeemuhammodwafy1.github.io/wafydocs/" target="_blank" rel="noopener noreferrer" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">WafyDocs</h3>
+          <p class="project-desc">Lightweight tool to instantly convert Markdown content into professional PDF and text documents.</p>
+          <div class="project-tags"><span>HTML</span><span>CSS</span></div>
+        </article>
+
+        <!-- AstroWafy: HTML, CSS, JS, API -->
+        <article class="project-card" data-tags="html css js api">
+          <div class="project-top">
+            <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-rocket"></i></div>
+            <div class="project-links-top">
+              <a href="https://github.com/afeemuhammodwafy1/astrowafy" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://astro.amwafy.xyz/" target="_blank" rel="noopener noreferrer" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">AstroWafy</h3>
+          <p class="project-desc">Automated web application that connects directly with NASA's APOD (Astronomy Picture of the Day) API to bring the wonders of the cosmos to users in real-time, featuring daily updated space imagery and comprehensive astronomical data.</p>
+          <div class="project-tags"><span>HTML</span><span>CSS</span><span>JS</span><span>NASA APOD API</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══ EDUCATION ═══ -->
+    <section id="education" class="section" aria-labelledby="education-title">
+      <div class="section-label">Education</div>
+      <h2 class="section-title" id="education-title">Academic Journey</h2>
+      <div class="edu-timeline">
+        <div class="edu-item"><div class="edu-dot" aria-hidden="true"></div><div class="edu-content"><div class="edu-header"><span class="edu-year">2024 — Present</span><span class="edu-badge">Current</span></div><h3 class="edu-title">Higher Secondary Certificate (HSC)</h3><p class="edu-meta">Science</p><p class="edu-desc">Concentrating on foundational science and mathematics electives, strengthening quantitative reasoning and logical analysis skills essential for higher computing studies.</p></div></div>
+        <div class="edu-item"><div class="edu-dot" aria-hidden="true"></div><div class="edu-content"><div class="edu-header"><span class="edu-year">2024</span><span class="edu-badge done">Completed</span></div><h3 class="edu-title">Secondary School Certificate (SSC)</h3><p class="edu-meta">Science</p><p class="edu-desc">Completed secondary science curriculum with balanced performance, establishing foundational knowledge in physics, chemistry, mathematics, and introductory computer technologies.</p></div></div>
+      </div>
+    </section>
+
+    <!-- ═══ CERTIFICATIONS ═══ -->
+    <section id="certifications" class="section" aria-labelledby="cert-title">
+      <div class="section-label">Certifications</div>
+      <h2 class="section-title" id="cert-title">Validations</h2>
+      <div class="cert-grid">
+        <div class="cert-item"><div class="cert-icon" aria-hidden="true"><i class="fa-solid fa-microchip"></i></div><h4>Digital Skills: AI</h4><p>FutureLearn - Accenture</p><a href="https://www.futurelearn.com/certificates/e6npdxg" target="_blank" rel="noopener noreferrer">Verify →</a></div>
+        <div class="cert-item"><div class="cert-icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div><h4>Intro to Cyber Security</h4><p>FutureLearn - Open University</p><a href="https://www.futurelearn.com/certificates/h6davat" target="_blank" rel="noopener noreferrer">Verify →</a></div>
+        <div class="cert-item"><div class="cert-icon" aria-hidden="true"><i class="fa-brands fa-python"></i></div><h4>Basics of Python</h4><p>UniAthena</p><a href="https://uniathena.com/verify/certificate?certID=8781-9786-7632" target="_blank" rel="noopener noreferrer">Verify →</a></div>
+        <div class="cert-item"><div class="cert-icon" aria-hidden="true"><i class="fa-solid fa-palette"></i></div><h4>Canva for Beginners</h4><p>Simplilearn</p><a href="https://simpli-web.app.link/e/DXiqi2ANM1b" target="_blank" rel="noopener noreferrer">Verify →</a></div>
+        <div class="cert-item"><div class="cert-icon" aria-hidden="true"><i class="fa-regular fa-file-excel"></i></div><h4>Excel: Zero to Hero</h4><p>Udemy</p><a href="https://udemy.com/certificate/UC-04491d93-4e56-413d-9c41-da1642c5844d/" target="_blank" rel="noopener noreferrer">Verify →</a></div>
+        <div class="cert-item"><div class="cert-icon" aria-hidden="true"><i class="fa-brands fa-html5"></i></div><h4>Introduction to HTML</h4><p>Simplilearn</p><a href="https://simpli-web.app.link/e/isp9CvQ6G1b" target="_blank" rel="noopener noreferrer">Verify →</a></div>
+      </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer id="footer" class="footer" role="contentinfo">
+      <div class="footer-content">
+        <h2 class="footer-title">Let's Connect</h2>
+        <p class="footer-desc">Feel free to reach out for collaborations, project sharing, or technical discussions.</p>
+        <div class="footer-social" aria-label="Social media links">
+          <a href="https://github.com/afeemuhammodwafy1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/afeemuhammodwafy1" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/muhammodwafy" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://instagram.com/afeemuhammodwafy" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com/afeemuhammodwafy" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="mailto:afeemuhammodwafy@yahoo.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <div class="footer-divider" aria-hidden="true"></div>
+        <p class="copyright">&copy; 2026 Wafy — Built with ❤️ &amp; passion for technology</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ============ BACK TO TOP ============ -->
+  <button id="backTop" class="back-top" aria-label="Back to top"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
+
+  <!-- ============ JAVASCRIPT ============ -->
+  <script>
+    // MOBILE MENU
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true';
+      menuBtn.setAttribute('aria-expanded', expanded);
+      menuBtn.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.classList.remove('active');
+        mobileNav.classList.remove('active');
+      });
+    });
+
+    // TYPING EFFECT
+    const roles = ["Science Student", "Cybersecurity Enthusiast", "Front-End Developer", "AI & Tech Explorer"];
+    let roleIndex = 0,
+      charIndex = 0,
+      isDeleting = false;
+    const roleEl = document.getElementById('roleText');
+
+    function typeRole() {
+      const current = roles[roleIndex];
+      if (isDeleting) {
+        roleEl.textContent = current.slice(0, charIndex - 1);
+        charIndex--;
+      } else {
+        roleEl.textContent = current.slice(0, charIndex + 1);
+        charIndex++;
+      }
+      if (!isDeleting && charIndex === current.length) {
+        isDeleting = true;
+        setTimeout(typeRole, 2000);
+        return;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(typeRole, 300);
+        return;
+      }
+      setTimeout(typeRole, isDeleting ? 40 : 80);
+    }
+    typeRole();
+
+    // ACTIVE NAV
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function setActive(id) {
+      navLinks.forEach(l => l.classList.toggle('active', l.dataset.section === id));
+      mobileLinks.forEach(l => l.classList.toggle('active', l.dataset.section === id));
+      navLinks.forEach(l => l.toggleAttribute('aria-current', l.dataset.section === id));
+      mobileLinks.forEach(l => l.toggleAttribute('aria-current', l.dataset.section === id));
+    }
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        const top = s.offsetTop - 150;
+        if (window.scrollY >= top) current = s.id;
+      });
+      setActive(current);
+    });
+
+    // BACK TO TOP
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', () => {
+      backTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // SMOOTH SCROLL
+    document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (link.hasAttribute('download')) return;
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // ========== PROJECT FILTER ==========
+    (function() {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      function matchesFilter(card, filter) {
+        if (filter === 'all') return true;
+        const tags = card.dataset.tags ? card.dataset.tags.split(' ') : [];
+        if (filter === 'python-flask') {
+          return tags.some(t => t === 'python' || t === 'flask');
         }
-        typeRole();
-
-        // 3. ACTIVE NAV LINK ON SCROLL
-        const sections = document.querySelectorAll('.section');
-        const navLinks = document.querySelectorAll('.nav-link');
-        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-
-        function setActive(id) {
-            navLinks.forEach(l => l.classList.toggle('active', l.dataset.section === id));
-            mobileLinks.forEach(l => l.classList.toggle('active', l.dataset.section === id));
-            navLinks.forEach(l => l.toggleAttribute('aria-current', l.dataset.section === id));
-            mobileLinks.forEach(l => l.toggleAttribute('aria-current', l.dataset.section === id));
+        if (filter === 'javascript') {
+          return tags.some(t => t === 'js' || t === 'javascript');
         }
+        if (filter === 'html-css') {
+          return tags.some(t => t === 'html' || t === 'css');
+        }
+        return true;
+      }
 
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(s => {
-                const top = s.offsetTop - 150;
-                if (window.scrollY >= top) current = s.id;
-            });
-            setActive(current);
+      function applyFilter(filter) {
+        projectCards.forEach(card => {
+          const show = matchesFilter(card, filter);
+          card.style.display = show ? 'flex' : 'none';
         });
+      }
 
-        // 4. BACK TO TOP BUTTON
-        const backTop = document.getElementById('backTop');
-        window.addEventListener('scroll', () => {
-            backTop.classList.toggle('visible', window.scrollY > 400);
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          applyFilter(this.dataset.filter);
         });
-        backTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+      });
 
-        // 5. SMOOTH SCROLL FOR NAV LINKS
-        document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                if (link.hasAttribute('download')) return;
-                e.preventDefault();
-                const target = document.querySelector(link.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
+      // initial: show all
+      applyFilter('all');
+    })();
 
-        console.log('✅ WAFY Portfolio Loaded Successfully!');
-    </script>
-
+    console.log('✅ WAFY Portfolio Loaded Successfully!');
+  </script>
 </body>
 </html>

@@ -377,7 +377,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* ─── Available Green Dot ─── */
 .pulse-dot {
     width: 8px;
     height: 8px;
@@ -506,7 +505,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* ─── Scroll Indicator ─── */
 .scroll-indicator {
     display: flex;
     flex-direction: column;
@@ -657,8 +655,42 @@ body {
 }
 
 /* ═══════════════════════════════════════
-   PROJECTS
+   PROJECTS - WITH FILTERING
    ═══════════════════════════════════════ */
+
+/* ─── Filter Buttons ─── */
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.filter-btn {
+    padding: 8px 18px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    font-family: var(--font);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    border-color: var(--text-muted);
+    color: var(--text-primary);
+}
+
+.filter-btn.active {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    border-color: var(--text-primary);
+}
+
+/* ─── Project Grid ─── */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -673,6 +705,8 @@ body {
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .project-card:hover {
@@ -736,6 +770,114 @@ body {
     border: 1px solid var(--border);
     border-radius: 50px;
     color: var(--text-muted);
+}
+
+/* ═══════════════════════════════════════
+   BLOG SECTION - REUSABLE COMPONENT
+   ═══════════════════════════════════════ */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.blog-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-4px);
+    background: var(--bg-card-hover);
+}
+
+.blog-card-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background: var(--bg-elevated);
+}
+
+.blog-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-card-image img {
+    transform: scale(1.03);
+}
+
+.blog-card-date {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    font-size: 0.6rem;
+    padding: 4px 12px;
+    background: rgba(13, 13, 13, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 50px;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    letter-spacing: 0.3px;
+}
+
+.blog-card-body {
+    padding: 20px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.blog-card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.blog-card-excerpt {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    flex-grow: 1;
+    margin-bottom: 16px;
+}
+
+.blog-card-readmore {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: var(--transition);
+    align-self: flex-start;
+    border-bottom: 1px solid transparent;
+}
+
+.blog-card-readmore i {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+}
+
+.blog-card-readmore:hover {
+    color: var(--text-primary);
+    border-bottom-color: var(--text-muted);
+}
+
+.blog-card-readmore:hover i {
+    transform: translateX(4px);
 }
 
 /* ═══════════════════════════════════════
@@ -1004,6 +1146,10 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .cert-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1070,8 +1216,21 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
     .cert-grid {
         grid-template-columns: 1fr;
+    }
+
+    .project-filters {
+        gap: 6px;
+    }
+
+    .filter-btn {
+        font-size: 0.65rem;
+        padding: 6px 14px;
     }
 
     .edu-content {
@@ -1135,11 +1294,28 @@ body {
         padding: 18px 16px;
     }
 
+    .blog-card-body {
+        padding: 16px 18px 18px;
+    }
+
+    .blog-card-title {
+        font-size: 0.95rem;
+    }
+
     .cert-item {
         padding: 18px 16px;
     }
 
     .edu-content {
         padding: 14px;
+    }
+
+    .project-filters {
+        gap: 4px;
+    }
+
+    .filter-btn {
+        font-size: 0.6rem;
+        padding: 5px 12px;
     }
 }
