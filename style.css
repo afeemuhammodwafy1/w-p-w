@@ -939,52 +939,47 @@ body {
 }
 
 /* ═══════════════════════════════════════
-   CONTACT FORM (Minimal)
+   CONTACT FORM (FIXED - MATCHES OTHER CARDS)
    ═══════════════════════════════════════ */
 .contact-form {
-  max-width: 560px;
-  margin: 0 auto;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px;
 }
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-.form-group {
+.contact-form .form-group {
   display: flex;
   flex-direction: column;
 }
-.form-group input,
-.form-group textarea {
-  padding: 10px 14px;
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  padding: 14px 18px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   color: var(--text-primary);
   font-family: var(--font);
-  font-size: 0.9rem;
+  font-size: 1rem;
   transition: var(--transition);
   width: 100%;
 }
-.form-group input::placeholder,
-.form-group textarea::placeholder {
+.contact-form .form-group input::placeholder,
+.contact-form .form-group textarea::placeholder {
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
-.form-group input:focus,
-.form-group textarea:focus {
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
   outline: none;
   border-color: var(--text-muted);
   background: var(--bg-card-hover);
 }
-.form-btn {
+.contact-form .form-btn {
   align-self: flex-start;
-  padding: 10px 28px;
-  font-size: 0.85rem;
-  margin-top: 4px;
+  padding: 14px 36px;
+  font-size: 0.95rem;
+  margin-top: 6px;
+  border-radius: 50px;
 }
 
 /* ═══════════════════════════════════════
@@ -1154,14 +1149,7 @@ body {
   .faq-answer p {
     font-size: 0.8rem;
   }
-  .contact-form {
-    max-width: 100%;
-  }
-  .form-row {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  .form-btn {
+  .contact-form .form-btn {
     width: 100%;
     justify-content: center;
   }
