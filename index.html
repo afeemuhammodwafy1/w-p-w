@@ -253,7 +253,7 @@
       </div>
     </section>
 
-    <!-- ═══ FAQ SECTION (Expandable) ═══ -->
+    <!-- ═══ FAQ SECTION (Expandable - Fixed) ═══ -->
     <section id="faq" class="section" aria-labelledby="faq-title">
       <div class="section-label">FAQ</div>
       <h2 class="section-title" id="faq-title">Frequently Asked Questions</h2>
@@ -522,7 +522,7 @@
     });
 
     // ======================================================
-    // 8. FAQ EXPAND / COLLAPSE (Accordion)
+    // 8. FAQ EXPAND / COLLAPSE - FIXED (Auto height)
     // ======================================================
     document.querySelectorAll('.faq-question-btn').forEach(button => {
       button.addEventListener('click', function() {
@@ -530,14 +530,16 @@
         this.setAttribute('aria-expanded', expanded);
         const answer = this.nextElementSibling;
         const icon = this.querySelector('.faq-icon i');
-        
+
         if (expanded === 'true') {
+          // Open: set height to scrollHeight (auto)
           answer.style.maxHeight = answer.scrollHeight + 'px';
           answer.style.opacity = '1';
-          answer.style.padding = '16px 22px 18px';
+          answer.style.padding = '0 22px 18px';
           icon.classList.remove('fa-chevron-down');
           icon.classList.add('fa-chevron-up');
         } else {
+          // Close
           answer.style.maxHeight = '0';
           answer.style.opacity = '0';
           answer.style.padding = '0 22px';
@@ -547,12 +549,12 @@
       });
     });
 
-    // Initialize FAQ answers as collapsed
+    // Initialize all FAQ answers as collapsed
     document.querySelectorAll('.faq-answer').forEach(answer => {
       answer.style.maxHeight = '0';
       answer.style.opacity = '0';
       answer.style.padding = '0 22px';
-      answer.style.transition = 'max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease';
+      answer.style.transition = 'max-height 0.35s ease, opacity 0.35s ease, padding 0.35s ease';
       answer.style.overflow = 'hidden';
     });
   </script>
