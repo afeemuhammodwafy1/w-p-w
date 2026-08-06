@@ -618,6 +618,134 @@ body {
 }
 
 /* ═══════════════════════════════════════
+   EXPERIENCE (Timeline)
+   ═══════════════════════════════════════ */
+.exp-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.exp-subheader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0 4px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4px;
+}
+.exp-sub-icon {
+  font-size: 1rem;
+  opacity: 0.6;
+}
+.exp-sub-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+}
+.exp-item {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+.exp-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 26px;
+  bottom: -24px;
+  width: 1px;
+  background: var(--border);
+}
+.exp-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+  z-index: 1;
+}
+.exp-dot.available {
+  background: #22c55e;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
+}
+.exp-content {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  transition: var(--transition);
+}
+.exp-content:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.exp-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+.exp-year {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.exp-badge {
+  font-size: 0.6rem;
+  padding: 2px 12px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+.exp-badge.open {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.3);
+  color: #22c55e;
+}
+.exp-badge.done {
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-muted);
+}
+.exp-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: var(--text-primary);
+}
+.exp-meta {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+.exp-desc {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.exp-links {
+  display: flex;
+  gap: 16px;
+}
+.exp-links a {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.exp-links a:hover {
+  color: var(--text-primary);
+}
+
+/* ═══════════════════════════════════════
    PROJECTS - WITH FILTERING
    ═══════════════════════════════════════ */
 .filter-bar {
@@ -726,12 +854,26 @@ body {
 }
 
 /* ═══════════════════════════════════════
-   EDUCATION
+   EDUCATION (with sub-sections)
    ═══════════════════════════════════════ */
+.edu-sub-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.edu-sub-heading i {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
 .edu-timeline {
   display: flex;
   flex-direction: column;
   gap: 28px;
+  margin-bottom: 12px;
 }
 .edu-item {
   display: flex;
@@ -812,7 +954,7 @@ body {
 }
 
 /* ═══════════════════════════════════════
-   CERTIFICATIONS
+   CERTIFICATIONS (inside Education)
    ═══════════════════════════════════════ */
 .cert-grid {
   display: grid;
@@ -863,7 +1005,7 @@ body {
 }
 
 /* ═══════════════════════════════════════
-   FAQ SECTION (AI SEO - Expandable)
+   FAQ SECTION
    ═══════════════════════════════════════ */
 .faq-list {
   display: flex;
@@ -1168,18 +1310,34 @@ body {
   .cert-grid {
     grid-template-columns: 1fr;
   }
+  .edu-content {
+    padding: 18px;
+  }
+  .edu-title {
+    font-size: 0.95rem;
+  }
+  .edu-sub-heading {
+    font-size: 1rem;
+    margin-bottom: 18px;
+  }
+  .exp-content {
+    padding: 18px;
+  }
+  .exp-title {
+    font-size: 0.95rem;
+  }
+  .exp-subheader {
+    padding: 8px 0 2px 0;
+  }
+  .exp-sub-label {
+    font-size: 0.65rem;
+  }
   .faq-question-btn {
     font-size: 0.85rem;
     padding: 14px 16px;
   }
   .faq-answer p {
     font-size: 0.8rem;
-  }
-  .edu-content {
-    padding: 18px;
-  }
-  .edu-title {
-    font-size: 0.95rem;
   }
   .footer {
     padding: 50px 20px 28px;
@@ -1241,12 +1399,18 @@ body {
   .cert-item {
     padding: 18px 16px;
   }
+  .edu-content {
+    padding: 14px;
+  }
+  .edu-sub-heading {
+    font-size: 0.9rem;
+  }
+  .exp-content {
+    padding: 14px;
+  }
   .faq-question-btn {
     font-size: 0.8rem;
     padding: 12px 14px;
-  }
-  .edu-content {
-    padding: 14px;
   }
   .filter-bar {
     gap: 6px;

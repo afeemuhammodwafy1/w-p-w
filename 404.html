@@ -10,11 +10,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="icon.png" />
+  <link rel="apple-touch-icon" href="icon.png" />
   <style>
     :root {
       --bg-primary: #0d0d0d;
       --bg-secondary: #141414;
       --bg-card: #1a1a1a;
+      --bg-card-hover: #222222;
       --text-primary: #f0f0f0;
       --text-secondary: #a8a8a8;
       --text-muted: #6a6a6a;
@@ -42,7 +45,7 @@
     }
     .error-wrapper {
       width: 100%;
-      max-width: 900px;
+      max-width: 920px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 50px;
@@ -50,18 +53,18 @@
       background: var(--bg-secondary);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 50px 50px 40px;
+      padding: 50px 48px 40px;
       position: relative;
       overflow: hidden;
     }
     .error-wrapper::before {
       content: '';
       position: absolute;
-      top: -50%;
-      right: -20%;
+      top: -40%;
+      right: -10%;
       width: 400px;
       height: 400px;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.01), transparent 70%);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.015), transparent 70%);
       pointer-events: none;
     }
     .error-content {
@@ -101,7 +104,7 @@
     }
     .error-title .highlight {
       color: var(--text-muted);
-      opacity: 0.5;
+      opacity: 0.4;
     }
     .error-desc {
       color: var(--text-secondary);
@@ -113,7 +116,7 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      padding: 12px 32px;
+      padding: 13px 34px;
       font-size: 0.85rem;
       font-weight: 600;
       font-family: var(--font);
@@ -136,7 +139,7 @@
       transform: translateX(-4px);
     }
     .error-footer {
-      margin-top: 36px;
+      margin-top: 40px;
       font-size: 0.7rem;
       color: var(--text-muted);
     }
@@ -150,6 +153,8 @@
       color: var(--text-primary);
       border-bottom-color: var(--text-muted);
     }
+
+    /* Visual */
     .error-visual {
       position: relative;
       z-index: 1;
@@ -163,7 +168,7 @@
       font-weight: 700;
       line-height: 1;
       color: var(--text-primary);
-      opacity: 0.03;
+      opacity: 0.025;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -187,12 +192,12 @@
     .floating-icon i {
       font-size: 3.8rem;
       color: var(--text-secondary);
-      opacity: 0.6;
+      opacity: 0.5;
       animation: iconPulse 3s ease-in-out infinite;
     }
     @keyframes float {
       0%, 100% {
-        transform: translateY(0) rotate(0);
+        transform: translateY(0) rotate(0deg);
       }
       50% {
         transform: translateY(-14px) rotate(2deg);
@@ -201,13 +206,14 @@
     @keyframes iconPulse {
       0%, 100% {
         transform: scale(1);
-        opacity: 0.5;
+        opacity: 0.4;
       }
       50% {
-        transform: scale(1.05);
-        opacity: 0.8;
+        transform: scale(1.06);
+        opacity: 0.7;
       }
     }
+
     .orbit-ring {
       position: absolute;
       width: 200px;
@@ -218,8 +224,8 @@
       pointer-events: none;
     }
     .orbit-ring:nth-child(2) {
-      width: 250px;
-      height: 250px;
+      width: 260px;
+      height: 260px;
       animation-duration: 30s;
       animation-direction: reverse;
       opacity: 0.5;
@@ -255,20 +261,22 @@
       top: 30%;
       right: -4px;
     }
+
     @keyframes spin {
       0% {
-        transform: rotate(0);
+        transform: rotate(0deg);
       }
       100% {
         transform: rotate(360deg);
       }
     }
+
     @media (max-width: 820px) {
       .error-wrapper {
         grid-template-columns: 1fr;
         gap: 30px;
         text-align: center;
-        padding: 36px 28px 30px;
+        padding: 36px 24px 30px;
       }
       .error-content {
         order: 2;
@@ -306,9 +314,10 @@
         height: 200px;
       }
     }
+
     @media (max-width: 480px) {
       .error-wrapper {
-        padding: 28px 18px 24px;
+        padding: 28px 16px 24px;
         border-radius: 12px;
       }
       .error-title {
@@ -354,6 +363,7 @@
         font-size: 0.6rem;
       }
     }
+
     @media (max-height: 600px) and (orientation: landscape) {
       .error-wrapper {
         grid-template-columns: 1fr 1fr;
@@ -409,7 +419,7 @@
       <div class="error-code"><i class="fa-regular fa-compass"></i> 404 — Lost</div>
       <h1 class="error-title">Page Not<br /><span class="highlight">Found</span></h1>
       <p class="error-desc">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
-      <a href="/" class="btn-home"><i class="fa-solid fa-house"></i> Back to Home</a>
+      <a href="/" class="btn-home"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
       <div class="error-footer">&copy; 2026 Afee Muhammod Wafy. All rights reserved.</div>
     </div>
     <div class="error-visual">
