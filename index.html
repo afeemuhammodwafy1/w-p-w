@@ -97,6 +97,7 @@
       <a href="#education" class="nav-link" data-section="education" role="menuitem"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i><span>Education</span></a>
       <a href="#certifications" class="nav-link" data-section="certifications" role="menuitem"><i class="fa-solid fa-certificate" aria-hidden="true"></i><span>Certifications</span></a>
       <a href="#faq" class="nav-link" data-section="faq" role="menuitem"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>FAQ</span></a>
+      <a href="#contact" class="nav-link" data-section="contact" role="menuitem"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Contact</span></a>
     </nav>
     <div class="sidebar-footer">
       <a href="cv.pdf" download="Afee_Muhammod_Wafy_Resume.pdf" class="sidebar-resume" id="sidebarResume" aria-label="Download resume (PDF)">
@@ -122,6 +123,7 @@
     <a href="#education" class="mobile-nav-link" data-section="education"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</a>
     <a href="#certifications" class="mobile-nav-link" data-section="certifications"><i class="fa-solid fa-certificate" aria-hidden="true"></i> Certifications</a>
     <a href="#faq" class="mobile-nav-link" data-section="faq"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> FAQ</a>
+    <a href="#contact" class="mobile-nav-link" data-section="contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>
     <a href="cv.pdf" download="Afee_Muhammod_Wafy_Resume.pdf" class="mobile-nav-link resume-mobile" id="mobileResume"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Resume</a>
   </div>
 
@@ -137,7 +139,7 @@
         <p class="hero-desc">I am a science student with a passion for web development and technology. I build clean, functional experiences while exploring AI, cybersecurity, and modern web tools.</p>
         <div class="hero-actions">
           <a href="#projects" class="btn-primary" aria-label="View my projects">View My Work <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          <a href="#footer" class="btn-secondary" aria-label="Scroll to contact section">Let's Connect</a>
+          <a href="#contact" class="btn-secondary" aria-label="Scroll to contact section">Let's Connect</a>
         </div>
         <div class="hero-social" aria-label="Social media links">
           <a href="https://github.com/afeemuhammodwafy1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
@@ -253,7 +255,7 @@
       </div>
     </section>
 
-    <!-- ═══ FAQ SECTION (Expandable - Fixed) ═══ -->
+    <!-- ═══ FAQ SECTION ═══ -->
     <section id="faq" class="section" aria-labelledby="faq-title">
       <div class="section-label">FAQ</div>
       <h2 class="section-title" id="faq-title">Frequently Asked Questions</h2>
@@ -267,7 +269,6 @@
             <p>I am a science student with a passion for web development and technology.</p>
           </div>
         </div>
-
         <div class="faq-item">
           <button class="faq-question-btn" aria-expanded="false">
             <span class="faq-question-text">What technologies and skills do you work with?</span>
@@ -277,7 +278,6 @@
             <p>I work with HTML, CSS, JavaScript, Python, Flask, Git, GitHub, Linux, and design tools like Canva. I am also currently learning C and Python in more depth.</p>
           </div>
         </div>
-
         <div class="faq-item">
           <button class="faq-question-btn" aria-expanded="false">
             <span class="faq-question-text">What projects have you built?</span>
@@ -287,7 +287,6 @@
             <p>I have built a link management platform, a web utilities suite, and a NASA APOD viewer.</p>
           </div>
         </div>
-
         <div class="faq-item">
           <button class="faq-question-btn" aria-expanded="false">
             <span class="faq-question-text">Are you available for freelance or collaboration work?</span>
@@ -297,17 +296,54 @@
             <p>Yes, I am open to part-time work and project-based collaborations.</p>
           </div>
         </div>
-
         <div class="faq-item">
           <button class="faq-question-btn" aria-expanded="false">
             <span class="faq-question-text">How can someone contact you?</span>
             <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
           </button>
           <div class="faq-answer">
-            <p>You can reach me via E-mail or connect with me on LinkedIn.</p>
+            <p>You can reach me via Email or connect with me on LinkedIn.</p>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- ═══ CONTACT FORM ═══ -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title" id="contact-title">Send Me a Message</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 32px; font-size: 0.95rem; max-width: 500px;">
+        Have a question, suggestion, or collaboration idea? Fill out the form below and I'll get back to you soon.
+      </p>
+
+      <form id="contactForm" class="contact-form" action="https://formspree.io/f/mwlekapd" method="POST">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What is this about?" />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit" id="submitBtn">
+          <span id="btnText">Send Message</span>
+          <span id="btnSpinner" style="display: none;"><i class="fa-solid fa-spinner fa-spin"></i></span>
+        </button>
+
+        <div id="formStatus" class="form-status" style="display: none;"></div>
+      </form>
     </section>
 
     <!-- ═══ FOOTER ═══ -->
@@ -522,7 +558,7 @@
     });
 
     // ======================================================
-    // 8. FAQ EXPAND / COLLAPSE - FIXED (Auto height)
+    // 8. FAQ EXPAND / COLLAPSE
     // ======================================================
     document.querySelectorAll('.faq-question-btn').forEach(button => {
       button.addEventListener('click', function() {
@@ -532,14 +568,12 @@
         const icon = this.querySelector('.faq-icon i');
 
         if (expanded === 'true') {
-          // Open: set height to scrollHeight (auto)
           answer.style.maxHeight = answer.scrollHeight + 'px';
           answer.style.opacity = '1';
           answer.style.padding = '0 22px 18px';
           icon.classList.remove('fa-chevron-down');
           icon.classList.add('fa-chevron-up');
         } else {
-          // Close
           answer.style.maxHeight = '0';
           answer.style.opacity = '0';
           answer.style.padding = '0 22px';
@@ -549,7 +583,6 @@
       });
     });
 
-    // Initialize all FAQ answers as collapsed
     document.querySelectorAll('.faq-answer').forEach(answer => {
       answer.style.maxHeight = '0';
       answer.style.opacity = '0';
@@ -557,6 +590,66 @@
       answer.style.transition = 'max-height 0.35s ease, opacity 0.35s ease, padding 0.35s ease';
       answer.style.overflow = 'hidden';
     });
+
+    // ======================================================
+    // 9. CONTACT FORM - Formspree Integration
+    // ======================================================
+    (function() {
+      const contactForm = document.getElementById('contactForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const btnText = document.getElementById('btnText');
+      const btnSpinner = document.getElementById('btnSpinner');
+      const formStatus = document.getElementById('formStatus');
+
+      if (!contactForm) return;
+
+      contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Disable button and show spinner
+        submitBtn.disabled = true;
+        btnText.style.display = 'none';
+        btnSpinner.style.display = 'inline';
+        formStatus.style.display = 'none';
+
+        const formData = new FormData(this);
+
+        try {
+          const response = await fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            // Success
+            formStatus.className = 'form-status success';
+            formStatus.textContent = '✅ Your message has been sent successfully! I will get back to you soon.';
+            formStatus.style.display = 'block';
+            this.reset();
+          } else {
+            // Error
+            throw new Error('Server error');
+          }
+        } catch (error) {
+          formStatus.className = 'form-status error';
+          formStatus.textContent = '❌ Failed to send message. Please try again later.';
+          formStatus.style.display = 'block';
+        } finally {
+          // Reset button state
+          submitBtn.disabled = false;
+          btnText.style.display = 'inline';
+          btnSpinner.style.display = 'none';
+
+          // Auto-hide status after 5 seconds
+          setTimeout(() => {
+            formStatus.style.display = 'none';
+          }, 5000);
+        }
+      });
+    })();
   </script>
 </body>
 </html>
