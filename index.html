@@ -148,10 +148,15 @@
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
+  <!-- ============================================================
+       SIDEBAR WITH CLICKABLE BRAND
+       ============================================================ -->
   <aside class="sidebar" role="navigation" aria-label="Main navigation">
     <div class="sidebar-brand">
-      <span class="brand-dot" aria-hidden="true"></span>
-      <span class="brand-text">WAFY</span>
+      <a href="/" aria-label="Home" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 6px;">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-text">WAFY</span>
+      </a>
     </div>
     <nav class="sidebar-nav" role="menubar">
       <a href="/" class="nav-link active" data-section="home" role="menuitem" aria-current="page">
@@ -191,9 +196,13 @@
     </div>
   </aside>
 
-  <!-- Mobile Header -->
+  <!-- ============================================================
+       MOBILE HEADER WITH CLICKABLE BRAND
+       ============================================================ -->
   <header class="mobile-header" role="banner">
-    <span class="mobile-brand">WAFY</span>
+    <a href="/" aria-label="Home" style="text-decoration: none; color: var(--text-primary);">
+      <span class="mobile-brand">WAFY</span>
+    </a>
     <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -237,7 +246,9 @@
 
   <main class="main-content" id="main-content" role="main">
 
-    <!-- Hero Section -->
+    <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
     <section id="home" class="section hero" aria-labelledby="hero-title">
       <div class="hero-content-center">
         <div class="hero-tag">
@@ -286,10 +297,25 @@
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ============================================================
+         ABOUT SECTION (UPDATED with Professional Bio)
+         ============================================================ -->
     <section id="about" class="section" aria-labelledby="about-title">
       <div class="section-label">About</div>
       <h2 class="section-title" id="about-title">Who I Am</h2>
+
+      <!-- New Professional About Text -->
+      <div class="about-card full-width" style="grid-column: 1 / -1; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 24px; margin-bottom: 28px;">
+        <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+          I'm Afee Muhammod Wafy — but you can call me <strong style="color: var(--text-primary);">Wafy</strong>. 
+          I'm a science student who codes not because I have to, but because I enjoy 
+          building things that work. I believe the best developers are curious, consistent, 
+          and never stop learning. I'm currently exploring AI, cybersecurity, and 
+          full-stack web development through hands-on projects.
+        </p>
+      </div>
+
+      <!-- 3 Cards (Mission, Approach, Philosophy) -->
       <div class="about-grid">
         <div class="about-card">
           <div class="about-icon" aria-hidden="true">
@@ -313,13 +339,11 @@
           <p>Driven by curiosity, consistency, and a strong focus on improvement. Every project reflects learning in action.</p>
         </div>
       </div>
-      <div class="about-quote-block">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
-        <p>"Building things that make ideas real."</p>
-      </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ============================================================
+         SKILLS SECTION
+         ============================================================ -->
     <section id="skills" class="section" aria-labelledby="skills-title">
       <div class="section-label">Skills</div>
       <h2 class="section-title" id="skills-title">My Arsenal</h2>
@@ -387,7 +411,9 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ============================================================
+         PROJECTS SECTION
+         ============================================================ -->
     <section id="projects" class="section" aria-labelledby="projects-title">
       <div class="section-label">Projects</div>
       <h2 class="section-title" id="projects-title">Latest Projects</h2>
@@ -483,7 +509,9 @@
       </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- ============================================================
+         EXPERIENCE SECTION
+         ============================================================ -->
     <section id="experience" class="section" aria-labelledby="exp-title">
       <div class="section-label">Experience</div>
       <h2 class="section-title" id="exp-title">My Journey</h2>
@@ -502,7 +530,9 @@
       </div>
     </section>
 
-    <!-- Education Section -->
+    <!-- ============================================================
+         EDUCATION SECTION
+         ============================================================ -->
     <section id="education" class="section" aria-labelledby="education-title">
       <div class="section-label">Education</div>
       <h2 class="section-title" id="education-title">Academic Background</h2>
@@ -576,7 +606,9 @@
       </div>
     </section>
 
-    <!-- FAQ Section (10 Questions) -->
+    <!-- ============================================================
+         FAQ SECTION (10 Questions)
+         ============================================================ -->
     <section id="faq" class="section" aria-labelledby="faq-title">
       <div class="section-label">FAQ</div>
       <h2 class="section-title" id="faq-title">Frequently Asked Questions</h2>
@@ -665,7 +697,9 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ============================================================
+         CONTACT SECTION
+         ============================================================ -->
     <section id="contact" class="section" aria-labelledby="contact-title">
       <div class="section-label">Contact</div>
       <h2 class="section-title" id="contact-title">Send Me a Message</h2>
@@ -703,7 +737,9 @@
       </form>
     </section>
 
-    <!-- Footer -->
+    <!-- ============================================================
+         FOOTER (Auto Copyright Year)
+         ============================================================ -->
     <footer id="footer" class="footer" role="contentinfo">
       <div class="footer-content">
         <h2 class="footer-title">Let's Connect</h2>
@@ -739,15 +775,14 @@
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
-  <!-- External Scripts -->
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
   <script src="/script.js"></script>
 
-  <!-- ============================================================
-       AUTO COPYRIGHT YEAR SCRIPT
-       ============================================================ -->
+  <!-- Auto Copyright Year -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Auto-update copyright year
       var yearSpan = document.getElementById('year');
       if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
