@@ -132,20 +132,20 @@ var navLinks = document.querySelectorAll('.nav-link');
 var mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
 function setActive(id) {
-  var isProjectsPage = window.location.pathname.includes('projects.html');
-  var isCertPage = window.location.pathname.includes('certifications.html');
+  var isProjectsPage = window.location.pathname.includes('/projects/');
+  var isCertPage = window.location.pathname.includes('/certifications/');
   
   navLinks.forEach(function(link) {
     var linkSection = link.getAttribute('data-section');
     
-    // On projects.html, keep Projects active
+    // On projects page, keep Projects active
     if (isProjectsPage && linkSection === 'projects') {
       link.classList.add('active');
       link.setAttribute('aria-current', 'page');
       return;
     }
     
-    // On certifications.html, keep Education active
+    // On certifications page, keep Education active
     if (isCertPage && linkSection === 'education') {
       link.classList.add('active');
       link.setAttribute('aria-current', 'page');
