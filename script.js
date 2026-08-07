@@ -1,25 +1,94 @@
 // ============================================================
-// MOBILE MENU
+// PROJECT FILTER - Smooth Animation with Event Listeners
 // ============================================================
-const menuBtn = document.getElementById('menuBtn');
-const mobileNav = document.getElementById('mobileNav');
-
-menuBtn.addEventListener('click', function() {
-  const expanded = this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true';
-  this.setAttribute('aria-expanded', expanded);
-  this.classList.toggle('active');
-  mobileNav.classList.toggle('active');
-  document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-});
-
-document.querySelectorAll('.mobile-nav-link').forEach(function(link) {
-  link.addEventListener('click', function() {
-    menuBtn.setAttribute('aria-expanded', 'false');
-    menuBtn.classList.remove('active');
-    mobileNav.classList.remove('active');
-    document.body.style.overflow = '';
+document.addEventListener('DOMContentLoaded', function() {
+  var filterButtons = document.querySelectorAll('.filter-btn');
+  
+  filterButtons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var filterType = this.getAttribute('data-filter');
+      var grid = this.closest('.section').querySelector('.projects-grid');
+      
+      if (!grid) return;
+      
+      var cards = grid.querySelectorAll('.project-card');
+      
+      // Update active button
+      var siblings = this.closest('.filter-bar').querySelectorAll('.filter-btn');
+      siblings.forEach(function(sib) {
+        sib.classList.remove('active');
+      });
+      this.classList.add('active');
+      
+      // Filter cards with smooth animation
+      cards.forEach(function(card, index) {
+        var tags = card.getAttribute('data-tags') || '';
+        var show = false;
+        
+        if (filterType === 'all') {
+          show = true;
+        } else if (filterType === 'python') {
+          show = tags.includes('python') || tags.includes('flask');
+        } else if (filterType === 'html-css-js') {
+          show = tags.includes('html') || tags.includes('css') || tags.includes('js');
+        } else if (filterType === 'api') {
+          show = tags.includes('api');
+        }
+        
+        // Hide animation
+        if (!show) {
+          card.classList.remove('filtering-in', 'show');
+          card.classList.add('filtering-out');
+          
+          setTimeout(function() {
+            if (!card.classList.contains('show')) {
+              card.style.display = 'none';
+            }
+          }, 400);
+        } else {
+          // Show animation with stagger effect
+          card.style.display = 'flex';
+          card.classList.remove('filtering-out');
+          card.classList.add('filtering-in');
+          
+          var delay = index * 80;
+          setTimeout(function() {
+            card.classList.add('show');
+          }, delay);
+          
+          setTimeout(function() {
+            card.classList.remove('filtering-in');
+          }, delay + 400);
+        }
+      });
+    });
   });
 });
+
+// ============================================================
+// MOBILE MENU
+// ============================================================
+var menuBtn = document.getElementById('menuBtn');
+var mobileNav = document.getElementById('mobileNav');
+
+if (menuBtn && mobileNav) {
+  menuBtn.addEventListener('click', function() {
+    var expanded = this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true';
+    this.setAttribute('aria-expanded', expanded);
+    this.classList.toggle('active');
+    mobileNav.classList.toggle('active');
+    document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+  });
+
+  document.querySelectorAll('.mobile-nav-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.classList.remove('active');
+      mobileNav.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+}
 
 // ============================================================
 // TYPING EFFECT
@@ -30,48 +99,88 @@ var charIndex = 0;
 var isDeleting = false;
 var roleEl = document.getElementById('roleText');
 
-function typeRole() {
-  var current = roles[roleIndex];
-  if (isDeleting) {
-    roleEl.textContent = current.slice(0, charIndex - 1);
-    charIndex--;
-  } else {
-    roleEl.textContent = current.slice(0, charIndex + 1);
-    charIndex++;
+if (roleEl) {
+  function typeRole() {
+    var current = roles[roleIndex];
+    if (isDeleting) {
+      roleEl.textContent = current.slice(0, charIndex - 1);
+      charIndex--;
+    } else {
+      roleEl.textContent = current.slice(0, charIndex + 1);
+      charIndex++;
+    }
+    if (!isDeleting && charIndex === current.length) {
+      isDeleting = true;
+      setTimeout(typeRole, 1500);
+      return;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+      setTimeout(typeRole, 300);
+      return;
+    }
+    setTimeout(typeRole, isDeleting ? 25 : 45);
   }
-  if (!isDeleting && charIndex === current.length) {
-    isDeleting = true;
-    setTimeout(typeRole, 1500);
-    return;
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    roleIndex = (roleIndex + 1) % roles.length;
-    setTimeout(typeRole, 300);
-    return;
-  }
-  setTimeout(typeRole, isDeleting ? 25 : 45);
+  typeRole();
 }
-typeRole();
 
 // ============================================================
-// ACTIVE NAV
+// ACTIVE NAV - Handles both index.html and subpages
 // ============================================================
 var sections = document.querySelectorAll('.section');
 var navLinks = document.querySelectorAll('.nav-link');
 var mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
 function setActive(id) {
+  var isProjectsPage = window.location.pathname.includes('projects.html');
+  var isCertPage = window.location.pathname.includes('certifications.html');
+  
   navLinks.forEach(function(link) {
-    link.classList.toggle('active', link.dataset.section === id);
+    var linkSection = link.getAttribute('data-section');
+    
+    // On projects.html, keep Projects active
+    if (isProjectsPage && linkSection === 'projects') {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+      return;
+    }
+    
+    // On certifications.html, keep Education active
+    if (isCertPage && linkSection === 'education') {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+      return;
+    }
+    
+    link.classList.toggle('active', linkSection === id);
+    if (linkSection === id) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
   });
+  
   mobileLinks.forEach(function(link) {
-    link.classList.toggle('active', link.dataset.section === id);
-  });
-  navLinks.forEach(function(link) {
-    link.toggleAttribute('aria-current', link.dataset.section === id);
-  });
-  mobileLinks.forEach(function(link) {
-    link.toggleAttribute('aria-current', link.dataset.section === id);
+    var linkSection = link.getAttribute('data-section');
+    
+    if (isProjectsPage && linkSection === 'projects') {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+      return;
+    }
+    
+    if (isCertPage && linkSection === 'education') {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+      return;
+    }
+    
+    link.classList.toggle('active', linkSection === id);
+    if (linkSection === id) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
   });
 }
 
@@ -93,13 +202,15 @@ window.addEventListener('scroll', function() {
 // ============================================================
 var backTop = document.getElementById('backTop');
 
-window.addEventListener('scroll', function() {
-  backTop.classList.toggle('visible', window.scrollY > 400);
-});
+if (backTop) {
+  window.addEventListener('scroll', function() {
+    backTop.classList.toggle('visible', window.scrollY > 400);
+  });
 
-backTop.addEventListener('click', function() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+  backTop.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 // ============================================================
 // SMOOTH SCROLL
@@ -138,78 +249,21 @@ document.querySelectorAll('.nav-link, .mobile-nav-link, .btn-primary, .btn-secon
 });
 
 // ============================================================
-// PROJECT FILTER
-// ============================================================
-(function() {
-  var filterButtons = document.querySelectorAll('.filter-btn');
-  var projectCards = document.querySelectorAll('.project-card');
-
-  function matchesFilter(card, filter) {
-    if (filter === 'all') return true;
-    var tags = card.dataset.tags ? card.dataset.tags.split(' ') : [];
-    if (filter === 'python-flask') {
-      return tags.some(function(t) { return t === 'python' || t === 'flask'; });
-    }
-    if (filter === 'javascript') {
-      return tags.some(function(t) { return t === 'js' || t === 'javascript'; });
-    }
-    if (filter === 'html-css') {
-      return tags.some(function(t) { return t === 'html' || t === 'css'; });
-    }
-    return true;
-  }
-
-  function applyFilter(filter) {
-    projectCards.forEach(function(card) {
-      var show = matchesFilter(card, filter);
-      if (show) {
-        card.style.display = 'flex';
-        requestAnimationFrame(function() {
-          card.style.opacity = '1';
-          card.style.transform = 'scale(1)';
-        });
-      } else {
-        card.style.opacity = '0';
-        card.style.transform = 'scale(0.95)';
-        setTimeout(function() {
-          card.style.display = 'none';
-        }, 250);
-      }
-    });
-  }
-
-  filterButtons.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      filterButtons.forEach(function(b) {
-        b.classList.remove('active');
-      });
-      this.classList.add('active');
-      applyFilter(this.dataset.filter);
-    });
-  });
-
-  projectCards.forEach(function(card) {
-    card.style.opacity = '1';
-    card.style.transform = 'scale(1)';
-  });
-})();
-
-// ============================================================
 // SCROLL INDICATOR AUTO-HIDE
 // ============================================================
 var scrollIndicator = document.getElementById('scrollIndicator');
 
-setTimeout(function() {
-  if (scrollIndicator) {
+if (scrollIndicator) {
+  setTimeout(function() {
     scrollIndicator.classList.add('fade-out');
-  }
-}, 4000);
+  }, 4000);
 
-window.addEventListener('scroll', function() {
-  if (scrollIndicator && window.scrollY > 50) {
-    scrollIndicator.classList.add('fade-out');
-  }
-});
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+      scrollIndicator.classList.add('fade-out');
+    }
+  });
+}
 
 // ============================================================
 // FAQ TOGGLE
@@ -225,14 +279,18 @@ document.querySelectorAll('.faq-question-btn').forEach(function(button) {
       answer.style.maxHeight = answer.scrollHeight + 'px';
       answer.style.opacity = '1';
       answer.style.padding = '0 22px 18px';
-      icon.classList.remove('fa-chevron-down');
-      icon.classList.add('fa-chevron-up');
+      if (icon) {
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-up');
+      }
     } else {
       answer.style.maxHeight = '0';
       answer.style.opacity = '0';
       answer.style.padding = '0 22px';
-      icon.classList.remove('fa-chevron-up');
-      icon.classList.add('fa-chevron-down');
+      if (icon) {
+        icon.classList.remove('fa-chevron-up');
+        icon.classList.add('fa-chevron-down');
+      }
     }
   });
 });
@@ -259,6 +317,12 @@ document.querySelectorAll('.faq-answer').forEach(function(answer) {
 
   contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
+
+    // Honeypot check: if this hidden field has a value, it's almost certainly a bot.
+    var honeypot = contactForm.querySelector('#company');
+    if (honeypot && honeypot.value.trim() !== '') {
+      return;
+    }
 
     submitBtn.disabled = true;
     btnText.style.display = 'none';
