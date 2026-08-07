@@ -75,6 +75,9 @@ textarea:focus-visible {
   top: 0;
 }
 
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
 .sidebar {
   position: fixed;
   left: 0;
@@ -136,9 +139,11 @@ textarea:focus-visible {
   min-height: 44px;
 }
 
-.nav-link i {
-  font-size: 1.1rem;
-  margin-bottom: 2px;
+.nav-link svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  flex-shrink: 0;
 }
 
 .nav-link:hover {
@@ -186,9 +191,11 @@ textarea:focus-visible {
   min-height: 44px;
 }
 
-.sidebar-resume i {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
+.sidebar-resume svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--text-secondary);
+  flex-shrink: 0;
 }
 
 .sidebar-resume:hover {
@@ -196,6 +203,9 @@ textarea:focus-visible {
   background: rgba(255, 255, 255, 0.02);
 }
 
+/* ============================================================
+   MOBILE HEADER & NAV
+   ============================================================ */
 .mobile-header {
   display: none;
   position: fixed;
@@ -206,6 +216,7 @@ textarea:focus-visible {
   padding: 14px 20px;
   background: rgba(10, 10, 10, 0.95);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   justify-content: space-between;
   align-items: center;
@@ -259,6 +270,7 @@ textarea:focus-visible {
   z-index: 89;
   background: rgba(10, 10, 10, 0.98);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   padding: 16px 20px 20px;
   border-bottom: 1px solid var(--border);
   flex-direction: column;
@@ -288,10 +300,11 @@ textarea:focus-visible {
   min-height: 44px;
 }
 
-.mobile-nav-link i {
+.mobile-nav-link svg {
   width: 18px;
-  color: var(--text-muted);
-  font-size: 0.95rem;
+  height: 18px;
+  stroke: currentColor;
+  flex-shrink: 0;
 }
 
 .mobile-nav-link:hover,
@@ -300,8 +313,8 @@ textarea:focus-visible {
   color: var(--text-primary);
 }
 
-.mobile-nav-link.active i {
-  color: var(--text-primary);
+.mobile-nav-link.active svg {
+  stroke: var(--text-primary);
 }
 
 .resume-mobile {
@@ -311,10 +324,13 @@ textarea:focus-visible {
   color: var(--text-light);
 }
 
-.resume-mobile i {
-  color: var(--text-secondary) !important;
+.resume-mobile svg {
+  stroke: var(--text-secondary) !important;
 }
 
+/* ============================================================
+   MAIN CONTENT
+   ============================================================ */
 .main-content {
   margin-left: var(--sidebar-width);
   flex: 1;
@@ -348,6 +364,9 @@ textarea:focus-visible {
   color: var(--text-primary);
 }
 
+/* ============================================================
+   HERO
+   ============================================================ */
 .hero {
   padding-top: 100px;
   padding-bottom: 60px;
@@ -456,6 +475,9 @@ textarea:focus-visible {
   margin-bottom: 36px;
 }
 
+/* ============================================================
+   BUTTONS
+   ============================================================ */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -471,6 +493,13 @@ textarea:focus-visible {
   border: none;
   cursor: pointer;
   min-height: 48px;
+}
+
+.btn-primary svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--bg-primary);
+  flex-shrink: 0;
 }
 
 .btn-primary:hover {
@@ -493,11 +522,25 @@ textarea:focus-visible {
   min-height: 48px;
 }
 
+.btn-secondary svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--text-secondary);
+  flex-shrink: 0;
+}
+
 .btn-secondary:hover {
   border-color: var(--text-muted);
   color: var(--text-primary);
 }
 
+.btn-secondary:hover svg {
+  stroke: var(--text-primary);
+}
+
+/* ============================================================
+   SOCIAL ICONS
+   ============================================================ */
 .hero-social {
   display: flex;
   gap: 12px;
@@ -515,7 +558,14 @@ textarea:focus-visible {
   color: var(--text-muted);
   text-decoration: none;
   transition: var(--transition);
-  font-size: 1rem;
+}
+
+.hero-social a svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--text-muted);
+  stroke: none;
+  flex-shrink: 0;
 }
 
 .hero-social a:hover {
@@ -525,6 +575,13 @@ textarea:focus-visible {
   transform: translateY(-2px);
 }
 
+.hero-social a:hover svg {
+  fill: var(--text-primary);
+}
+
+/* ============================================================
+   SCROLL INDICATOR
+   ============================================================ */
 .scroll-indicator {
   display: flex;
   flex-direction: column;
@@ -545,11 +602,20 @@ textarea:focus-visible {
   animation: none;
 }
 
+.scroll-indicator svg {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+}
+
 @keyframes bounce-down {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(6px); }
 }
 
+/* ============================================================
+   ABOUT
+   ============================================================ */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -573,9 +639,14 @@ textarea:focus-visible {
 }
 
 .about-icon {
-  font-size: 1.4rem;
-  color: var(--text-muted);
   margin-bottom: 10px;
+}
+
+.about-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--text-muted);
+  stroke-width: 1.5;
 }
 
 .about-card h3 {
@@ -599,9 +670,11 @@ textarea:focus-visible {
   background: rgba(255, 255, 255, 0.01);
 }
 
-.about-quote-block i {
-  font-size: 1.4rem;
-  color: var(--text-muted);
+.about-quote-block svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--text-muted);
+  stroke-width: 1.5;
   opacity: 0.3;
   margin-bottom: 6px;
 }
@@ -613,6 +686,9 @@ textarea:focus-visible {
   letter-spacing: -0.01em;
 }
 
+/* ============================================================
+   SKILLS
+   ============================================================ */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -641,9 +717,12 @@ textarea:focus-visible {
   margin-bottom: 14px;
 }
 
-.skill-group-header i {
-  font-size: 1.1rem;
-  color: var(--text-muted);
+.skill-group-header svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--text-muted);
+  stroke-width: 1.5;
+  flex-shrink: 0;
 }
 
 .skill-group-header h3 {
@@ -673,6 +752,9 @@ textarea:focus-visible {
   color: var(--text-primary);
 }
 
+/* ============================================================
+   PROJECTS
+   ============================================================ */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -736,9 +818,11 @@ textarea:focus-visible {
   margin-bottom: 14px;
 }
 
-.project-icon {
-  font-size: 1.4rem;
-  color: var(--text-muted);
+.project-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--text-muted);
+  stroke-width: 1.5;
 }
 
 .project-links-top {
@@ -749,11 +833,23 @@ textarea:focus-visible {
 .project-links-top a {
   color: var(--text-muted);
   transition: var(--transition);
-  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+}
+
+.project-links-top a svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--text-muted);
+  stroke: none;
 }
 
 .project-links-top a:hover {
   color: var(--text-primary);
+}
+
+.project-links-top a:hover svg {
+  fill: var(--text-primary);
 }
 
 .project-title {
@@ -791,6 +887,9 @@ textarea:focus-visible {
   color: var(--text-muted);
 }
 
+/* ============================================================
+   FILTER BAR
+   ============================================================ */
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -832,6 +931,9 @@ textarea:focus-visible {
   border-color: var(--text-primary);
 }
 
+/* ============================================================
+   EXPERIENCE
+   ============================================================ */
 .exp-timeline {
   display: flex;
   flex-direction: column;
@@ -921,6 +1023,9 @@ textarea:focus-visible {
   color: var(--text-primary);
 }
 
+/* ============================================================
+   EDUCATION
+   ============================================================ */
 .edu-sub-heading {
   font-size: 1.2rem;
   font-weight: 600;
@@ -931,9 +1036,12 @@ textarea:focus-visible {
   gap: 12px;
 }
 
-.edu-sub-heading i {
-  color: var(--text-muted);
-  font-size: 1.1rem;
+.edu-sub-heading svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--text-muted);
+  stroke-width: 1.5;
+  flex-shrink: 0;
 }
 
 .edu-timeline {
@@ -1032,6 +1140,9 @@ textarea:focus-visible {
   line-height: 1.7;
 }
 
+/* ============================================================
+   CERTIFICATIONS
+   ============================================================ */
 .cert-grid-home {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1070,9 +1181,11 @@ textarea:focus-visible {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
-.cert-icon {
-  font-size: 1.6rem;
-  color: var(--text-muted);
+.cert-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--text-muted);
+  stroke-width: 1.5;
   margin-bottom: 10px;
 }
 
@@ -1103,6 +1216,9 @@ textarea:focus-visible {
   color: var(--text-primary);
 }
 
+/* ============================================================
+   FAQ
+   ============================================================ */
 .faq-list {
   display: flex;
   flex-direction: column;
@@ -1147,11 +1263,18 @@ textarea:focus-visible {
 .faq-question-btn .faq-icon {
   flex-shrink: 0;
   color: var(--text-muted);
-  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+}
+
+.faq-question-btn .faq-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
   transition: transform 0.3s ease;
 }
 
-.faq-question-btn[aria-expanded="true"] .faq-icon {
+.faq-question-btn[aria-expanded="true"] .faq-icon svg {
   transform: rotate(180deg);
 }
 
@@ -1171,6 +1294,9 @@ textarea:focus-visible {
   margin: 0;
 }
 
+/* ============================================================
+   CONTACT FORM
+   ============================================================ */
 .contact-form {
   max-width: 560px;
   width: 100%;
@@ -1180,7 +1306,7 @@ textarea:focus-visible {
   margin-bottom: 20px;
 }
 
-/* Honeypot: visually hidden, still present in DOM so most bots fill it in */
+/* Honeypot: visually hidden */
 .hp-field {
   position: absolute;
   left: -9999px;
@@ -1252,6 +1378,18 @@ textarea:focus-visible {
   transform: none;
 }
 
+#btnSpinner svg {
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  stroke: var(--bg-primary);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .form-status {
   margin-top: 16px;
   padding: 12px 18px;
@@ -1274,6 +1412,9 @@ textarea:focus-visible {
   color: #ef4444;
 }
 
+/* ============================================================
+   FOOTER
+   ============================================================ */
 .footer {
   padding: 80px 60px 40px;
   border-top: 1px solid var(--border);
@@ -1318,11 +1459,23 @@ textarea:focus-visible {
   transition: var(--transition);
 }
 
+.footer-social a svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--text-muted);
+  stroke: none;
+  flex-shrink: 0;
+}
+
 .footer-social a:hover {
   border-color: var(--text-muted);
   color: var(--text-primary);
   background: rgba(255, 255, 255, 0.02);
   transform: translateY(-2px);
+}
+
+.footer-social a:hover svg {
+  fill: var(--text-primary);
 }
 
 .footer-divider {
@@ -1339,6 +1492,9 @@ textarea:focus-visible {
   letter-spacing: 0.3px;
 }
 
+/* ============================================================
+   BACK TO TOP
+   ============================================================ */
 .back-top {
   position: fixed;
   bottom: 28px;
@@ -1354,11 +1510,20 @@ textarea:focus-visible {
   opacity: 0;
   visibility: hidden;
   z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .back-top.visible {
   opacity: 1;
   visibility: visible;
+}
+
+.back-top svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
 }
 
 .back-top:hover {
@@ -1368,6 +1533,9 @@ textarea:focus-visible {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
 @media (max-width: 1024px) {
   .hero-name { font-size: 3rem; }
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
