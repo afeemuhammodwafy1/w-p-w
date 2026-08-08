@@ -148,7 +148,7 @@
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Sidebar with Clickable Brand -->
+  <!-- Sidebar -->
   <aside class="sidebar" role="navigation" aria-label="Main navigation">
     <div class="sidebar-brand">
       <a href="/" aria-label="Home" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 6px;">
@@ -181,6 +181,10 @@
         <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
         <span>Education</span>
       </a>
+      <a href="/learning/" class="nav-link" data-section="learning" role="menuitem">
+        <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 00-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 00-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Learning</span>
+      </a>
       <a href="/#contact" class="nav-link" data-section="contact" role="menuitem">
         <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         <span>Contact</span>
@@ -194,7 +198,7 @@
     </div>
   </aside>
 
-  <!-- Mobile Header with Clickable Brand -->
+  <!-- Mobile Header -->
   <header class="mobile-header" role="banner">
     <a href="/" aria-label="Home" style="text-decoration: none; color: var(--text-primary);">
       <span class="mobile-brand">WAFY</span>
@@ -229,6 +233,10 @@
     <a href="/#education" class="mobile-nav-link" data-section="education">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
       Education
+    </a>
+    <a href="/learning/" class="mobile-nav-link" data-section="learning">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 00-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 00-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+      Learning
     </a>
     <a href="/#contact" class="mobile-nav-link" data-section="contact">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -295,8 +303,6 @@
     <section id="about" class="section" aria-labelledby="about-title">
       <div class="section-label">About</div>
       <h2 class="section-title" id="about-title">Who I Am</h2>
-
-      <!-- Professional About Text -->
       <div class="about-card full-width" style="grid-column: 1 / -1; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 24px; margin-bottom: 28px;">
         <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
           I'm Afee Muhammod Wafy — but you can call me <strong style="color: var(--text-primary);">Wafy</strong>. 
@@ -306,8 +312,6 @@
           full-stack web development through hands-on projects.
         </p>
       </div>
-
-      <!-- 3 Cards (Mission, Approach, Philosophy) -->
       <div class="about-grid">
         <div class="about-card">
           <div class="about-icon" aria-hidden="true">
@@ -367,11 +371,7 @@
         </div>
         <div class="skill-group">
           <div class="skill-group-header">
-            <!-- Updated AI Icon (Brain / Location replaced) -->
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M12 2a8 8 0 00-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 00-8-8z"/>
-  <circle cx="12" cy="10" r="3"/>
-</svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 00-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 00-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
             <h3>AI & Emerging Tech</h3>
           </div>
           <div class="skill-tags">
@@ -409,17 +409,13 @@
     <section id="projects" class="section" aria-labelledby="projects-title">
       <div class="section-label">Projects</div>
       <h2 class="section-title" id="projects-title">Latest Projects</h2>
-
       <div class="filter-bar" role="group" aria-label="Filter projects by technology">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="python">Python</button>
         <button class="filter-btn" data-filter="html-css-js">HTML / CSS / JS</button>
         <button class="filter-btn" data-filter="api">API</button>
       </div>
-
       <div class="projects-grid" id="homeProjects">
-
-        <!-- Project 1: WafyURL with Problem-Solution -->
         <div class="project-card" data-tags="python flask html css js">
           <div class="project-top">
             <div class="project-icon" aria-hidden="true">
@@ -436,8 +432,6 @@
           </div>
           <h3 class="project-title">WafyURL</h3>
           <p class="project-desc">Premium full-stack link management platform with QR code generator and real-time analytics dashboard.</p>
-
-          <!-- Problem-Solution Section Added -->
           <p class="project-problem" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">
             <span style="font-weight: 600; color: var(--text-primary);">Problem:</span> 
             Existing link shorteners lacked analytics and QR features.
@@ -450,7 +444,6 @@
             <span style="font-weight: 500; color: var(--text-secondary);">What I learned:</span> 
             Flask routing, database modeling, chart.js, and deployment.
           </p>
-
           <div class="project-tags">
             <span>Python</span>
             <span>Flask</span>
@@ -459,8 +452,6 @@
             <span>JS</span>
           </div>
         </div>
-
-        <!-- Project 2: WafyDev with Problem-Solution -->
         <div class="project-card" data-tags="html css js">
           <div class="project-top">
             <div class="project-icon" aria-hidden="true">
@@ -477,8 +468,6 @@
           </div>
           <h3 class="project-title">WafyDev</h3>
           <p class="project-desc">Free suite of fast, secure web utilities including password generator, text tools, QR generator, and color palette.</p>
-
-          <!-- Problem-Solution Section Added -->
           <p class="project-problem" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">
             <span style="font-weight: 600; color: var(--text-primary);">Problem:</span> 
             Developers often need quick tools but don't want to rely on external sites.
@@ -491,15 +480,12 @@
             <span style="font-weight: 500; color: var(--text-secondary);">What I learned:</span> 
             Client-side JavaScript, localStorage, and building privacy-first tools.
           </p>
-
           <div class="project-tags">
             <span>HTML</span>
             <span>CSS</span>
             <span>JS</span>
           </div>
         </div>
-
-        <!-- Project 3: AstroWafy with Problem-Solution -->
         <div class="project-card" data-tags="html css js api">
           <div class="project-top">
             <div class="project-icon" aria-hidden="true">
@@ -516,8 +502,6 @@
           </div>
           <h3 class="project-title">AstroWafy</h3>
           <p class="project-desc">Automated web application that connects directly with NASA's APOD API to bring daily space imagery and astronomical data.</p>
-
-          <!-- Problem-Solution Section Added -->
           <p class="project-problem" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">
             <span style="font-weight: 600; color: var(--text-primary);">Problem:</span> 
             Space enthusiasts need a simple way to access NASA's daily astronomy content.
@@ -530,7 +514,6 @@
             <span style="font-weight: 500; color: var(--text-secondary);">What I learned:</span> 
             API integration, JSON parsing, dynamic content rendering, and responsive image handling.
           </p>
-
           <div class="project-tags">
             <span>HTML</span>
             <span>CSS</span>
@@ -538,7 +521,6 @@
             <span>NASA APOD API</span>
           </div>
         </div>
-
       </div>
       <div class="projects-view-all">
         <a href="/projects/" class="btn-primary">
@@ -603,8 +585,68 @@
         </div>
       </div>
 
-      <h3 class="edu-sub-heading" style="margin-top: 48px;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+      <!-- Learning Section (Expandable) -->
+      <div style="margin-top: 48px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;">
+          <h3 class="edu-sub-heading" style="display: flex; align-items: center; gap: 12px; margin: 0; font-size: 1.2rem; font-weight: 600; color: var(--text-primary);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a8 8 0 00-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 00-8-8z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            Learning
+            <span style="font-size: 0.7rem; font-weight: 400; color: var(--text-muted); background: rgba(255,255,255,0.03); padding: 2px 12px; border-radius: 50px; border: 1px solid var(--border);">1st Semester</span>
+          </h3>
+          <a href="/learning/" style="color: var(--text-secondary); font-size: 0.85rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition); border-bottom: 1px solid transparent;">
+            View Full Learning Journey
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <!-- 3 Important Courses -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 8px;">
+          <div class="course-card">
+            <span class="course-label">Core</span>
+            <h4 class="course-title">Structured Programming (C)</h4>
+          </div>
+          <div class="course-card">
+            <span class="course-label">Core</span>
+            <h4 class="course-title">Computer Fundamentals</h4>
+          </div>
+          <div class="course-card">
+            <span class="course-label">Mathematics</span>
+            <h4 class="course-title">Calculus</h4>
+          </div>
+        </div>
+
+        <!-- Expandable Courses (Hidden by default) -->
+        <div id="allCourses" class="courses-container">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-top: 8px;">
+            <div class="extra-course">
+              <h4 class="extra-title">Physics</h4>
+            </div>
+            <div class="extra-course">
+              <h4 class="extra-title">English Communication</h4>
+            </div>
+            <div class="extra-course">
+              <h4 class="extra-title">Bangladesh Studies</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Toggle Button -->
+        <button id="toggleCoursesBtn" class="toggle-courses-btn" aria-label="Toggle courses">
+          <svg id="toggleIcon" class="toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Certifications -->
+      <h3 class="edu-sub-heading" style="margin-top: 48px; display: flex; align-items: center; gap: 12px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="7"/>
+          <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+        </svg>
         Certifications
       </h3>
       <div class="cert-grid-home">
@@ -641,13 +683,11 @@
       </div>
     </section>
 
-    <!-- FAQ Section (10 Questions with slightly expanded answers) -->
+    <!-- FAQ Section -->
     <section id="faq" class="section" aria-labelledby="faq-title">
       <div class="section-label">FAQ</div>
       <h2 class="section-title" id="faq-title">Frequently Asked Questions</h2>
       <div class="faq-list">
-
-        <!-- 1 -->
         <div class="faq-item">
           <button class="faq-question-btn" aria-expanded="false">
             <span class="faq-question-text">Who is Afee Muhammod Wafy?</span>
@@ -655,8 +695,6 @@
           </button>
           <div class="faq-answer"><p>I am a science student with a deep passion for web development and technology. I enjoy learning new things and building projects that solve real problems. My journey is driven by curiosity and a desire to create meaningful digital experiences.</p></div>
         </div>
-
-        <!-- 2 -->
         <div class="faq-item">
           <button class="faq-question-btn" aria-expanded="false">
             <span class="faq-question-text">What projects have you built?</span>
@@ -664,8 +702,6 @@
           </button>
           <div class="faq-answer"><p>I have built three main projects so far: WafyURL, a full-stack link management platform with analytics and QR generation; WafyDev, a suite of developer utilities; and AstroWafy, a NASA APOD API-powered space image viewer. Each project helped me learn new skills and improve my development workflow.</p></div>
         </div>
-
-        <!-- 3 -->
         <div class="faq-item">
           <button class="faq-question-btn" aria-expanded="false">
             <span class="faq-question-text">Are you available for freelance or collaboration work?</span>
@@ -673,8 +709,6 @@
           </button>
           <div class="faq-answer"><p>Yes, I am open to part-time freelance work and project-based collaborations. I enjoy working on meaningful projects where I can contribute my skills and learn from others. Feel free to reach out if you have an idea or a project in mind.</p></div>
         </div>
-
-        <!-- 4 -->
         <div class="faq-item">
           <button class="faq-question-btn" aria-expanded="false">
             <span class="faq-question-text">How can someone contact you?</span>
@@ -682,8 +716,6 @@
           </button>
           <div class="faq-answer"><p>You can reach me via email at afeemuhammodwafy@yahoo.com or connect with me on LinkedIn. I am also active on GitHub and Twitter, where I share my learning journey and project updates. I try to respond to all messages within 24 hours.</p></div>
         </div>
-
-        <!-- 5 -->
         <div class="faq-item">
           <button class="faq-question-btn" aria-expanded="false">
             <span class="faq-question-text">What technologies do you use to build your projects?</span>
@@ -691,8 +723,6 @@
           </button>
           <div class="faq-answer"><p>I work with HTML5, CSS3, JavaScript (ES6+), Python, Flask, Git, and GitHub. For design, I use Canva and follow responsive design principles. I also work with REST APIs and deploy projects on GitHub Pages and custom domains. I am currently exploring authentication, databases, and AI integration.</p></div>
         </div>
-
-        <!-- 6 -->
         <div class="faq-item">
           <button class="faq-question-btn" aria-expanded="false">
             <span class="faq-question-text">Are your projects open-source?</span>
@@ -700,8 +730,6 @@
           </button>
           <div class="faq-answer"><p>Yes, all my projects are publicly available on GitHub. I believe in open-source and the power of sharing knowledge. You can explore the source code, suggest improvements, or fork them for your own learning. Feedback and contributions are always welcome.</p></div>
         </div>
-
-        <!-- 7 -->
         <div class="faq-item">
           <button class="faq-question-btn" aria-expanded="false">
             <span class="faq-question-text">Do you work with APIs?</span>
@@ -709,8 +737,6 @@
           </button>
           <div class="faq-answer"><p>Yes, I have worked with REST APIs like the NASA APOD API. I am comfortable fetching, parsing, and displaying JSON data in web applications. I enjoy integrating third-party services to add functionality and make projects more interactive.</p></div>
         </div>
-
-        <!-- 8 -->
         <div class="faq-item">
           <button class="faq-question-btn" aria-expanded="false">
             <span class="faq-question-text">What is your current learning focus?</span>
@@ -718,8 +744,6 @@
           </button>
           <div class="faq-answer"><p>Currently, I am focusing on full-stack web development, AI integration, and cybersecurity fundamentals. I am also improving my Python and Flask skills. My goal is to become a well-rounded developer who can build secure, scalable, and intelligent applications.</p></div>
         </div>
-
-        <!-- 9 -->
         <div class="faq-item">
           <button class="faq-question-btn" aria-expanded="false">
             <span class="faq-question-text">Do you follow any coding standards or best practices?</span>
@@ -727,8 +751,6 @@
           </button>
           <div class="faq-answer"><p>Yes, I follow clean code principles, use semantic HTML, write modular CSS, and ensure my JavaScript is accessible and performant. I also use Git for version control and follow industry-standard practices to keep my code maintainable and scalable.</p></div>
         </div>
-
-        <!-- 10 -->
         <div class="faq-item">
           <button class="faq-question-btn" aria-expanded="false">
             <span class="faq-question-text">What motivates you to build web projects?</span>
@@ -736,7 +758,6 @@
           </button>
           <div class="faq-answer"><p>I am motivated by the desire to solve real-world problems through code. Building something from scratch and seeing it work gives me a sense of purpose and creativity. I also enjoy learning new technologies and sharing my knowledge with the developer community.</p></div>
         </div>
-
       </div>
     </section>
 
@@ -814,15 +835,32 @@
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
-  <!-- Scripts -->
   <script src="/script.js"></script>
-
-  <!-- Auto Copyright Year -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var yearSpan = document.getElementById('year');
       if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
+      }
+
+      // Toggle courses
+      var toggleBtn = document.getElementById('toggleCoursesBtn');
+      var allCourses = document.getElementById('allCourses');
+      var toggleIcon = document.getElementById('toggleIcon');
+
+      if (toggleBtn && allCourses && toggleIcon) {
+        toggleBtn.addEventListener('click', function() {
+          var isOpen = allCourses.classList.contains('open');
+          if (isOpen) {
+            allCourses.classList.remove('open');
+            allCourses.style.display = 'none';
+            toggleIcon.classList.remove('rotated');
+          } else {
+            allCourses.classList.add('open');
+            allCourses.style.display = 'block';
+            toggleIcon.classList.add('rotated');
+          }
+        });
       }
     });
   </script>
