@@ -204,7 +204,7 @@ var backTop = document.getElementById('backTop');
 
 if (backTop) {
   window.addEventListener('scroll', function() {
-    backTop.classList.toggle('visible', window.scrollY > 400);
+    backTop.classList.toggle('visible', window.scrollY > 200);
   });
 
   backTop.addEventListener('click', function() {
@@ -273,23 +273,21 @@ document.querySelectorAll('.faq-question-btn').forEach(function(button) {
     var expanded = this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true';
     this.setAttribute('aria-expanded', expanded);
     var answer = this.nextElementSibling;
-    var icon = this.querySelector('.faq-icon i');
+    var icon = this.querySelector('.faq-icon svg');
 
     if (expanded === 'true') {
       answer.style.maxHeight = answer.scrollHeight + 'px';
       answer.style.opacity = '1';
       answer.style.padding = '0 22px 18px';
       if (icon) {
-        icon.classList.remove('fa-chevron-down');
-        icon.classList.add('fa-chevron-up');
+        icon.style.transform = 'rotate(180deg)';
       }
     } else {
       answer.style.maxHeight = '0';
       answer.style.opacity = '0';
       answer.style.padding = '0 22px';
       if (icon) {
-        icon.classList.remove('fa-chevron-up');
-        icon.classList.add('fa-chevron-down');
+        icon.style.transform = 'rotate(0deg)';
       }
     }
   });
@@ -318,7 +316,7 @@ document.querySelectorAll('.faq-answer').forEach(function(answer) {
   contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
 
-    // Honeypot check: if this hidden field has a value, it's almost certainly a bot.
+    // Honeypot check
     var honeypot = contactForm.querySelector('#company');
     if (honeypot && honeypot.value.trim() !== '') {
       return;
@@ -360,3 +358,8 @@ document.querySelectorAll('.faq-answer').forEach(function(answer) {
     }
   });
 })();
+
+// ============================================================
+// AUTO COPYRIGHT YEAR (Already in HTML, but keeping as backup)
+// ============================================================
+// This is also handled in the HTML script block
