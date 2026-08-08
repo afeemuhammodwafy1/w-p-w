@@ -316,8 +316,8 @@ document.querySelectorAll('.faq-answer').forEach(function(answer) {
   contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
 
-    // Honeypot check
-    var honeypot = contactForm.querySelector('#company');
+    // Honeypot check - updated to match new field name
+    var honeypot = contactForm.querySelector('#_hp');
     if (honeypot && honeypot.value.trim() !== '') {
       return;
     }
@@ -358,8 +358,3 @@ document.querySelectorAll('.faq-answer').forEach(function(answer) {
     }
   });
 })();
-
-// ============================================================
-// AUTO COPYRIGHT YEAR (Already in HTML, but keeping as backup)
-// ============================================================
-// This is also handled in the HTML script block
