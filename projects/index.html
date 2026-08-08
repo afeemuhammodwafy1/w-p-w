@@ -37,8 +37,10 @@
 
   <aside class="sidebar" role="navigation" aria-label="Main navigation">
     <div class="sidebar-brand">
-      <span class="brand-dot" aria-hidden="true"></span>
-      <span class="brand-text">WAFY</span>
+      <a href="/" aria-label="Home" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 6px;">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-text">WAFY</span>
+      </a>
     </div>
     <nav class="sidebar-nav" role="menubar">
       <a href="/" class="nav-link" data-section="home" role="menuitem">
@@ -79,7 +81,9 @@
   </aside>
 
   <header class="mobile-header" role="banner">
-    <span class="mobile-brand">WAFY</span>
+    <a href="/" aria-label="Home" style="text-decoration: none; color: var(--text-primary);">
+      <span class="mobile-brand">WAFY</span>
+    </a>
     <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -134,6 +138,8 @@
       </div>
 
       <div class="projects-grid" id="projectsGrid">
+
+        <!-- Project 1: WafyURL -->
         <div class="project-card" data-tags="python flask html css js">
           <div class="project-top">
             <div class="project-icon" aria-hidden="true">
@@ -144,12 +150,27 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               </a>
               <a href="https://url.amwafy.xyz/" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               </a>
             </div>
           </div>
           <h3 class="project-title">WafyURL</h3>
           <p class="project-desc">Premium full-stack link management platform with QR code generator and real-time analytics dashboard.</p>
+
+          <!-- Problem-Solution Section Added -->
+          <p class="project-problem" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">
+            <span style="font-weight: 600; color: var(--text-primary);">Problem:</span> 
+            Existing link shorteners lacked analytics and QR features.
+          </p>
+          <p class="project-solution" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 2px;">
+            <span style="font-weight: 600; color: var(--text-primary);">Solution:</span> 
+            Built a full-stack platform with Flask, real-time dashboard, and dynamic QR generation.
+          </p>
+          <p class="project-learn" style="font-size: 0.8rem; color: var(--text-muted); margin-top: 6px; border-top: 1px solid var(--border); padding-top: 8px;">
+            <span style="font-weight: 500; color: var(--text-secondary);">What I learned:</span> 
+            Flask routing, database modeling, chart.js, and deployment.
+          </p>
+
           <div class="project-tags">
             <span>Python</span>
             <span>Flask</span>
@@ -159,6 +180,7 @@
           </div>
         </div>
 
+        <!-- Project 2: WafyDev -->
         <div class="project-card" data-tags="html css js">
           <div class="project-top">
             <div class="project-icon" aria-hidden="true">
@@ -169,12 +191,26 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               </a>
               <a href="https://afeemuhammodwafy1.github.io/wafydev/" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               </a>
             </div>
           </div>
           <h3 class="project-title">WafyDev</h3>
           <p class="project-desc">Free suite of fast, secure web utilities including password generator, text tools, QR generator, and color palette.</p>
+
+          <p class="project-problem" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">
+            <span style="font-weight: 600; color: var(--text-primary);">Problem:</span> 
+            Developers often need quick tools but don't want to rely on external sites.
+          </p>
+          <p class="project-solution" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 2px;">
+            <span style="font-weight: 600; color: var(--text-primary);">Solution:</span> 
+            Built a lightweight suite with essential utilities that work offline and respect user privacy.
+          </p>
+          <p class="project-learn" style="font-size: 0.8rem; color: var(--text-muted); margin-top: 6px; border-top: 1px solid var(--border); padding-top: 8px;">
+            <span style="font-weight: 500; color: var(--text-secondary);">What I learned:</span> 
+            Client-side JavaScript, localStorage, and building privacy-first tools.
+          </p>
+
           <div class="project-tags">
             <span>HTML</span>
             <span>CSS</span>
@@ -182,6 +218,7 @@
           </div>
         </div>
 
+        <!-- Project 3: AstroWafy -->
         <div class="project-card" data-tags="html css js api">
           <div class="project-top">
             <div class="project-icon" aria-hidden="true">
@@ -192,12 +229,26 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               </a>
               <a href="https://astro.amwafy.xyz/" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               </a>
             </div>
           </div>
           <h3 class="project-title">AstroWafy</h3>
           <p class="project-desc">Automated web application that connects directly with NASA's APOD API to bring daily space imagery and astronomical data.</p>
+
+          <p class="project-problem" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">
+            <span style="font-weight: 600; color: var(--text-primary);">Problem:</span> 
+            Space enthusiasts need a simple way to access NASA's daily astronomy content.
+          </p>
+          <p class="project-solution" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 2px;">
+            <span style="font-weight: 600; color: var(--text-primary);">Solution:</span> 
+            Built a clean, responsive interface that fetches and displays APOD data with explanations.
+          </p>
+          <p class="project-learn" style="font-size: 0.8rem; color: var(--text-muted); margin-top: 6px; border-top: 1px solid var(--border); padding-top: 8px;">
+            <span style="font-weight: 500; color: var(--text-secondary);">What I learned:</span> 
+            API integration, JSON parsing, dynamic content rendering, and responsive image handling.
+          </p>
+
           <div class="project-tags">
             <span>HTML</span>
             <span>CSS</span>
@@ -205,6 +256,7 @@
             <span>NASA APOD API</span>
           </div>
         </div>
+
       </div>
 
       <div class="projects-back-home">
@@ -240,7 +292,7 @@
           </a>
         </div>
         <div class="footer-divider" aria-hidden="true"></div>
-        <p class="copyright">&copy; 2026 Afee Muhammod Wafy. All rights reserved.</p>
+        <p class="copyright">&copy; <span id="year"></span> Afee Muhammod Wafy. All rights reserved.</p>
       </div>
     </footer>
 
@@ -251,6 +303,14 @@
   </button>
 
   <script src="/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var yearSpan = document.getElementById('year');
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
 
 </body>
 </html>
